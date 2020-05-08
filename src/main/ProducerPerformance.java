@@ -1,0 +1,216 @@
+package main;
+
+import java.lang.System;
+import java.util.Arrays;
+import java.util.Properties;
+import java.util.Random;
+
+import org.apache.kafka.clients.producer.Callback;
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.Producer;
+import org.apache.kafka.clients.producer.ProducerConfig;
+import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.clients.producer.RecordMetadata;
+
+public class ProducerPerformance {
+    public static void main(String[] args) throws Exception {
+
+        if(args.length != 4) {
+            System.out.println("Falta de argumentos, execução: " +
+                    "java src.javaproduce.Producer <topic> <acks> <qntRecords> <size>");
+            System.exit(1);
+        }
+
+        String topicName = args[0];
+        String acks = args[1];
+        int qntRecords = Integer.parseInt(args[2]);
+        int size = Integer.parseInt(args[3]);
+
+        System.out.println("Topic to send: " + topicName);
+        System.out.println("Topic to acks: " + acks);
+        System.out.println("Records: " + qntRecords);
+        System.out.println("Size:" + size);
+
+        String message = genRecord(size);
+        Properties props = newConfig(topicName, acks, qntRecords);
+        Producer<String, String> producer = new KafkaProducer<>(props);
+
+        Stats stats = new Stats(qntRecords, 5000);
+        long startMs = System.currentTimeMillis();
+        ThroughputThrottler throttler = new ThroughputThrottler(-1, startMs);
+
+        ProducerRecord<String, String> record;
+        // Send messages;
+        for (int i = 0; i < qntRecords; i++) {
+            record = new ProducerRecord<>(topicName, message);
+            long sendStartMs = System.currentTimeMillis();
+            Callback cb = stats.nextCompletion(sendStartMs, message.length(), stats);
+            producer.send(record,cb);
+            if (throttler.shouldThrottle(i, sendStartMs)) {
+                throttler.throttle();
+            }
+        }
+        producer.flush();
+        stats.printTotal();
+        ToolsUtils.printMetrics(producer.metrics());
+        producer.close();
+    }
+
+    private static Properties newConfig(String topicName, String acks, int qntRecords) {
+        System.out.println("Buscando saber qual o ack: " + acks);
+        Properties props = new Properties();
+        props.put(ProducerConfig.QNT_REQUESTS, qntRecords);
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+        props.put(ProducerConfig.ACKS_CONFIG, acks);
+        props.put(ProducerConfig.TOPIC_TO_SEND, topicName);
+        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+        if (acks.equals("-2")) {
+            System.out.println("Entrou aquiiii.");
+            props.put(ProducerConfig.INTERCEPTOR_CLASSES_CONFIG, Difuser.class.getName());
+        }
+        return props;
+    }
+
+    private static String genRecord(int size) {
+        int value = 0;
+        String message = "";
+        Random r = new Random();
+        for (int i = 0; i < size; i++) {
+            value = r.nextInt((90 - 65) + 1) + 65;
+            message += (char) (value);
+        }
+        return message;
+    }
+
+    private static class Stats {
+        private long start;
+        private long windowStart;
+        private int[] latencies;
+        private int sampling;
+        private int iteration;
+        private int index;
+        private long count;
+        private long bytes;
+        private int maxLatency;
+        private long totalLatency;
+        private long windowCount;
+        private int windowMaxLatency;
+        private long windowTotalLatency;
+        private long windowBytes;
+        private long reportingInterval;
+
+        public Stats(long numRecords, int reportingInterval) {
+            this.start = System.currentTimeMillis();
+            this.windowStart = System.currentTimeMillis();
+            this.iteration = 0;
+            this.sampling = (int) (numRecords / Math.min(numRecords, 500000));
+            this.latencies = new int[(int) (numRecords / this.sampling) + 1];
+            this.index = 0;
+            this.maxLatency = 0;
+            this.totalLatency = 0;
+            this.windowCount = 0;
+            this.windowMaxLatency = 0;
+            this.windowTotalLatency = 0;
+            this.windowBytes = 0;
+            this.totalLatency = 0;
+            this.reportingInterval = reportingInterval;
+        }
+
+        public void record(int iter, int latency, int bytes, long time) {
+            this.count++;
+            this.bytes += bytes;
+            this.totalLatency += latency;
+            this.maxLatency = Math.max(this.maxLatency, latency);
+            this.windowCount++;
+            this.windowBytes += bytes;
+            this.windowTotalLatency += latency;
+            this.windowMaxLatency = Math.max(windowMaxLatency, latency);
+            if (iter % this.sampling == 0) {
+                this.latencies[index] = latency;
+                this.index++;
+            }
+            /* maybe report the recent perf */
+            if (time - windowStart >= reportingInterval) {
+                printWindow();
+                newWindow();
+            }
+        }
+
+        public Callback nextCompletion(long start, int bytes, Stats stats) {
+            Callback cb = new PerfCallback(this.iteration, start, bytes, stats);
+            this.iteration++;
+            return cb;
+        }
+
+        public void printWindow() {
+            long ellapsed = System.currentTimeMillis() - windowStart;
+            double recsPerSec = 1000.0 * windowCount / (double) ellapsed;
+            double mbPerSec = 1000.0 * this.windowBytes / (double) ellapsed / (1024.0 * 1024.0);
+            System.out.printf("%d records sent, %.1f records/sec (%.2f MB/sec), %.1f ms avg latency, %.1f ms max latency.%n",
+                    windowCount,
+                    recsPerSec,
+                    mbPerSec,
+                    windowTotalLatency / (double) windowCount,
+                    (double) windowMaxLatency);
+        }
+
+        public void newWindow() {
+            this.windowStart = System.currentTimeMillis();
+            this.windowCount = 0;
+            this.windowMaxLatency = 0;
+            this.windowTotalLatency = 0;
+            this.windowBytes = 0;
+        }
+
+        public void printTotal() {
+            long elapsed = System.currentTimeMillis() - start;
+            double recsPerSec = 1000.0 * count / (double) elapsed;
+            double mbPerSec = 1000.0 * this.bytes / (double) elapsed / (1024.0 * 1024.0);
+            int[] percs = percentiles(this.latencies, index, 0.5, 0.95, 0.99, 0.999);
+            System.out.printf("%d records sent, %f records/sec (%.2f MB/sec), %.2f ms avg latency, %.2f ms max latency, %d ms 50th, %d ms 95th, %d ms 99th, %d ms 99.9th.%n",
+                    count,
+                    recsPerSec,
+                    mbPerSec,
+                    totalLatency / (double) count,
+                    (double) maxLatency,
+                    percs[0],
+                    percs[1],
+                    percs[2],
+                    percs[3]);
+        }
+
+        private static int[] percentiles(int[] latencies, int count, double... percentiles) {
+            int size = Math.min(count, latencies.length);
+            Arrays.sort(latencies, 0, size);
+            int[] values = new int[percentiles.length];
+            for (int i = 0; i < percentiles.length; i++) {
+                int index = (int) (percentiles[i] * size);
+                values[i] = latencies[index];
+            }
+            return values;
+        }
+    }
+
+    private static final class PerfCallback implements Callback {
+        private final long start;
+        private final int iteration;
+        private final int bytes;
+        private final Stats stats;
+
+        public PerfCallback(int iter, long start, int bytes, Stats stats) {
+            this.start = start;
+            this.stats = stats;
+            this.iteration = iter;
+            this.bytes = bytes;
+        }
+
+        public void onCompletion(RecordMetadata metadata, Exception exception) {
+            long now = System.currentTimeMillis();
+            int latency = (int) (now - start);
+            this.stats.record(iteration, latency, bytes, now);
+            if (exception != null)
+                exception.printStackTrace();
+        }
+    }
+}

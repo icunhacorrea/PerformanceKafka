@@ -1,0 +1,6 @@
+.idea/
+*/ignite/
+Watcher-kafka.iml
+.out/*
+*.class
+*.jar

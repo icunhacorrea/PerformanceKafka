@@ -29,7 +29,6 @@ public class Difuser<K, V> implements ProducerInterceptor<K, V> {
 
     @Override
     public ProducerRecord<K, V> onSend(ProducerRecord<K, V> record) {
-        System.out.println("eNTRANDO NO ON SEND.");
         idSeq++;
         Timestamp stamp = new Timestamp(System.currentTimeMillis());
         Record _record = new Record(origem, destino, idSeq, qntRecords, record.key().toString(),

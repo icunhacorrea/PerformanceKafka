@@ -42,7 +42,7 @@ public class ProducerPerformance {
         ProducerRecord<String, String> record;
         // Send messages;
         for (int i = 0; i < qntRecords; i++) {
-            record = new ProducerRecord<>(topicName, message);
+            record = new ProducerRecord<>(topicName, Integer.toString(i), message);
             long sendStartMs = System.currentTimeMillis();
             Callback cb = stats.nextCompletion(sendStartMs, message.length(), stats);
             producer.send(record,cb);
@@ -65,10 +65,7 @@ public class ProducerPerformance {
         props.put(ProducerConfig.TOPIC_TO_SEND, topicName);
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
-        if (acks.equals("-2")) {
-            System.out.println("Entrou aquiiii.");
-            props.put(ProducerConfig.INTERCEPTOR_CLASSES_CONFIG, Difuser.class.getName());
-        }
+        props.put(ProducerConfig.INTERCEPTOR_CLASSES_CONFIG, Difuser.class.getName());
         return props;
     }
 

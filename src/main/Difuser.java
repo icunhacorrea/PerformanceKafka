@@ -25,6 +25,7 @@ public class Difuser<K, V> implements ProducerInterceptor<K, V> {
 
     String origem;
     String destino;
+    String acks;
     int idSeq = 0, qntRecords;
 
     @Override
@@ -34,13 +35,16 @@ public class Difuser<K, V> implements ProducerInterceptor<K, V> {
         Record _record = new Record(origem, destino, idSeq, qntRecords, record.key().toString(),
                 record.value().toString(), stamp.getTime());
         record.setAfterTimestamp(stamp.getTime());
-        try {
-            socket = new Socket(ip, port);
-            oos = new ObjectOutputStream(socket.getOutputStream());
-            oos.writeObject(_record);
-            oos.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+
+        if (acks.equals("-2")) {
+            try {
+                socket = new Socket(ip, port);
+                oos = new ObjectOutputStream(socket.getOutputStream());
+                oos.writeObject(_record);
+                oos.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         return record;
     }
@@ -60,6 +64,7 @@ public class Difuser<K, V> implements ProducerInterceptor<K, V> {
         destino = config.get(ProducerConfig.TOPIC_TO_SEND).toString();
 
         qntRecords = (Integer) config.get(ProducerConfig.QNT_REQUESTS);
+        acks = (String) config.get(ProducerConfig.ACKS_CONFIG);
 
         try {
             this.ip = InetAddress.getByName("localhost");

@@ -61,7 +61,6 @@ public class ProducerPerformance {
     }
 
     private static Properties newConfig(String topicName, String acks, int qntRecords) {
-        System.out.println("Buscando saber qual o ack: " + acks);
         Properties props = new Properties();
         props.put(ProducerConfig.QNT_REQUESTS, qntRecords);
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");

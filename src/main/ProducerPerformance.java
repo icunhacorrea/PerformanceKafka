@@ -39,13 +39,17 @@ public class ProducerPerformance {
         long startMs = System.currentTimeMillis();
         ThroughputThrottler throttler = new ThroughputThrottler(-1, startMs);
 
-        ProducerRecord<String, String> record;
         // Send messages;
         for (int i = 0; i < qntRecords; i++) {
-            record = new ProducerRecord<>(topicName, Integer.toString(i), message);
+            ProducerRecord<String, String> record = new ProducerRecord<>(topicName, Integer.toString(i), message);
             long sendStartMs = System.currentTimeMillis();
             Callback cb = stats.nextCompletion(sendStartMs, message.length(), stats);
-            producer.send(record,cb);
+
+            try {
+                RecordMetadata metadata = producer.send(record, cb).get();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             if (throttler.shouldThrottle(i, sendStartMs)) {
                 throttler.throttle();
             }

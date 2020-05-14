@@ -52,7 +52,6 @@ public class Difuser<K, V> implements ProducerInterceptor<K, V> {
                 }
             }*/
             try {
-                oos = new ObjectOutputStream(socket.getOutputStream());
                 oos.writeObject(_record);
                 oos.flush();
             } catch (IOException e) {
@@ -84,6 +83,7 @@ public class Difuser<K, V> implements ProducerInterceptor<K, V> {
             socket = new Socket(ip, port);
             socket.setSendBufferSize(Integer.MAX_VALUE);
             socket.setKeepAlive(true);
+            oos = new ObjectOutputStream(socket.getOutputStream());
         } catch (Exception e) {
             e.printStackTrace();
         }

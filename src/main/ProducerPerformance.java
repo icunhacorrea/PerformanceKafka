@@ -70,7 +70,7 @@ public class ProducerPerformance {
         props.put(ProducerConfig.RETRIES_CONFIG, 1);
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
-        //props.put(ProducerConfig.INTERCEPTOR_CLASSES_CONFIG, Difuser.class.getName());
+        props.put(ProducerConfig.INTERCEPTOR_CLASSES_CONFIG, Difuser.class.getName());
         return props;
     }
 

@@ -47,17 +47,19 @@ public class ProducerPerformance {
         Thread difuser = new Thread(new Runnable() {
             @Override
             public void run() {
+		        boolean running = true;
                 try {
-                    while (true) {
+                    while (running) {
                         synchronized (records) {
-                            if (records.size() >  9) {
+                            if (records.size() > 1) {
                                 send(records);
                                 records.clear();
                             }
                         }
                         if (finished.get() == true) {
-                            send(records);
-                            System.exit(0);
+			                send(records);
+			                records.clear();
+                            running = false;
                         }
                     }
                 } catch (Exception e) {
@@ -94,7 +96,7 @@ public class ProducerPerformance {
                 if (throttler.shouldThrottle(i, sendStartMs)) {
                     throttler.throttle();
                 }
-                //Thread.sleep(rd.nextInt(20) + 100);
+                //Thread.sleep(rd.nextInt(11) + 10);
             }
             long stopProduce = System.currentTimeMillis();
             producer.flush();
@@ -107,6 +109,7 @@ public class ProducerPerformance {
         catch (Exception e) {
             e.printStackTrace();
         }
+        difuser.join();
         System.out.println("Aplication time: " + (System.currentTimeMillis() - startApp) / 1000F);
     }
 
@@ -116,7 +119,6 @@ public class ProducerPerformance {
             socket.setSendBufferSize(Integer.MAX_VALUE);
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
             oos.writeObject(records);
-            records.clear();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -131,8 +133,8 @@ public class ProducerPerformance {
         props.put(ProducerConfig.TOPIC_TO_SEND, topicName);
         if (acks.equals(-1) || acks.equals(-1))
             props.put(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, true);
-
-        //props.put(ProducerConfig.BATCH_SIZE_CONFIG, 0);
+        props.put(ProducerConfig.BATCH_SIZE_CONFIG, 11000);
+        props.put(ProducerConfig.RETRIES_CONFIG, 1);
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
         return props;
@@ -280,3 +282,4 @@ public class ProducerPerformance {
         }
     }
 }
+

@@ -69,6 +69,7 @@ public class ProducerPerformance {
 
         difuser.start();
 
+<<<<<<< HEAD
         try {
             Random rd = new Random();
             Stats stats = new Stats(qntRecords, 5000);
@@ -96,6 +97,15 @@ public class ProducerPerformance {
                     throttler.throttle();
                 }
                 //Thread.sleep(rd.nextInt(11) + 10);
+=======
+            try {
+                producer.send(record, cb);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            if (throttler.shouldThrottle(i, sendStartMs)) {
+                throttler.throttle();
+>>>>>>> 986fbfe952f4fc905a3fdd38dd963103b8dd5e3b
             }
             long stopProduce = System.currentTimeMillis();
             producer.flush();
@@ -133,7 +143,12 @@ public class ProducerPerformance {
             props.put(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, true);
 
         props.put(ProducerConfig.TOPIC_TO_SEND, topicName);
+<<<<<<< HEAD
         //props.put(ProducerConfig.BATCH_SIZE_CONFIG, 11000);
+=======
+        props.put(ProducerConfig.BATCH_SIZE_CONFIG, 11000);
+        props.put(ProducerConfig.RETRIES_CONFIG, 1);
+>>>>>>> 986fbfe952f4fc905a3fdd38dd963103b8dd5e3b
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
         return props;

@@ -8,12 +8,11 @@
 KAFKA_PATH=/opt/kafka
 
 # first delete partition
-
-$KAFKA_PATH/bin/kafka-topics.sh --zookeeper 14.0.0.1:2181,14.0.0.3:2181,14.0.0.6:2181 --delete --topic test-topic
-
 sshpass -p "lsc" ssh -t lsc@14.0.0.1 "/opt/kafka/bin/zookeeper-shell.sh localhost:2181 delete /brokers/topics/test-topic"
 
-sleep 5
+sleep 60
+
+$KAFKA_PATH/bin/kafka-topics.sh --zookeeper 14.0.0.1:2181,14.0.0.3:2181,14.0.0.6:2181 --delete --topic test-topic
 
 # then, create partition
 

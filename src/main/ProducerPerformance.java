@@ -58,7 +58,7 @@ public class ProducerPerformance {
                         }
                         if (finished.get() == true) {
 			                send(records);
-			                records.clear();
+			                //records.clear();
                             running = false;
                         }
                     }
@@ -115,7 +115,7 @@ public class ProducerPerformance {
 
     private static void send(List<Record> records) {
         try {
-            Socket socket = new Socket("14.0.0.4", 6666);
+            Socket socket = new Socket("localhost", 6666);
             socket.setSendBufferSize(Integer.MAX_VALUE);
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
             oos.writeObject(records);
@@ -128,12 +128,12 @@ public class ProducerPerformance {
         Properties props = new Properties();
         props.put(ProducerConfig.QNT_REQUESTS, qntRecords);
         props.put(ProducerConfig.CLIENT_ID_CONFIG, "producer");
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "14.0.0.1:9092,14.0.0.3:9092,14.0.0.6:9092");
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         props.put(ProducerConfig.ACKS_CONFIG, acks);
         props.put(ProducerConfig.TOPIC_TO_SEND, topicName);
-        if (acks.equals(-1) || acks.equals(-1))
+        if (acks.equals(-1) || acks.equals("all"))
             props.put(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, true);
-        props.put(ProducerConfig.BATCH_SIZE_CONFIG, 11000);
+        props.put(ProducerConfig.BATCH_SIZE_CONFIG, 0);
         props.put(ProducerConfig.RETRIES_CONFIG, 1);
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");

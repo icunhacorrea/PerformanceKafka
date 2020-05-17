@@ -6,15 +6,9 @@ do
 	do
 		for i in {0..2}
 		do
-			if [ $ack -eq -1 ]
-			then
-				./admin/createTopicMinInsync.sh 3 3
-			else
-				./admin/createTopic.sh 3 3
-			fi
-			sleep 15
+			./admin/refreshTopic.sh
 			time ./execute.sh test-topic $ack 50000 $size > logs/log-$ack-$size-$i.out
-			sleep 60
+			sleep 20
 		done
 	done
 done

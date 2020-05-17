@@ -51,7 +51,7 @@ public class ProducerPerformance {
                 try {
                     while (running) {
                         synchronized (records) {
-                            if (records.size() > 1) {
+                            if (records.size() > 99) {
                                 send(records);
                                 records.clear();
                             }
@@ -115,7 +115,7 @@ public class ProducerPerformance {
 
     private static void send(List<Record> records) {
         try {
-            Socket socket = new Socket("localhost", 6666);
+            Socket socket = new Socket("14.0.0.4", 6666);
             socket.setSendBufferSize(Integer.MAX_VALUE);
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
             oos.writeObject(records);
@@ -128,7 +128,7 @@ public class ProducerPerformance {
         Properties props = new Properties();
         props.put(ProducerConfig.QNT_REQUESTS, qntRecords);
         props.put(ProducerConfig.CLIENT_ID_CONFIG, "producer");
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "14.0.0.1:9092,14.0.0.3:9092,14.0.0.6:9092");
         props.put(ProducerConfig.ACKS_CONFIG, acks);
         props.put(ProducerConfig.TOPIC_TO_SEND, topicName);
         if (acks.equals(-1) || acks.equals(-1))

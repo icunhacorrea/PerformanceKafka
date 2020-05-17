@@ -1,9 +1,11 @@
 package main;
 
+import java.io.ObjectOutputStream;
 import java.lang.System;
-import java.util.Arrays;
-import java.util.Properties;
-import java.util.Random;
+import java.net.Socket;
+import java.sql.Timestamp;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.apache.kafka.clients.producer.Callback;
 import org.apache.kafka.clients.producer.KafkaProducer;
@@ -11,10 +13,12 @@ import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
+import recordutil.src.main.Record;
+
 
 public class ProducerPerformance {
     public static void main(String[] args) throws Exception {
-
+        long startApp = System.currentTimeMillis();
         if(args.length != 4) {
             System.out.println("Falta de argumentos, execução: " +
                     "java src.javaproduce.Producer <topic> <acks> <qntRecords> <size>");
@@ -35,41 +39,103 @@ public class ProducerPerformance {
         Properties props = newConfig(topicName, acks, qntRecords);
         Producer<String, String> producer = new KafkaProducer<>(props);
 
-        Stats stats = new Stats(qntRecords, 5000);
-        long startMs = System.currentTimeMillis();
-        ThroughputThrottler throttler = new ThroughputThrottler(-1, startMs);
+        // Variáveis compartilhadas.
+        Vector<Record> records = new Vector<>();
+        AtomicBoolean finished = new AtomicBoolean();
+        finished.set(false);
 
-        // Send messages;
-        for (int i = 0; i < qntRecords; i++) {
-            ProducerRecord<String, String> record = new ProducerRecord<>(topicName, Integer.toString(i), message);
-            long sendStartMs = System.currentTimeMillis();
-            Callback cb = stats.nextCompletion(sendStartMs, message.length(), stats);
+        Thread difuser = new Thread(new Runnable() {
+            @Override
+            public void run() {
+		boolean running = true;
+                try {
+                    while (running) {
+                        synchronized (records) {
+                            if (records.size() > 99) {
+                                send(records);
+                                records.clear();
+                            }
+                        }
+                        if (finished.get() == true) {
+			    send(records);
+                            running = false;
+                        }
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
 
-            try {
+        difuser.start();
+
+        try {
+            Random rd = new Random();
+            Stats stats = new Stats(qntRecords, 5000);
+            long startMs = System.currentTimeMillis();
+            ThroughputThrottler throttler = new ThroughputThrottler(-1, startMs);
+            // Send messages;
+            long startProduce = System.currentTimeMillis();
+            for (int i = 0; i < qntRecords; i++) {
+                ProducerRecord<String, String> record = new ProducerRecord<>(topicName, Integer.toString(i), message);
+                long sendStartMs = System.currentTimeMillis();
+                Callback cb = stats.nextCompletion(sendStartMs, message.length(), stats);
+
+                Timestamp stamp = new Timestamp(System.currentTimeMillis());
+                Record _record = new Record("producer", topicName, i + 1, qntRecords, record.key(),
+                        record.value(), stamp.getTime());
+                if (acks.equals("-2")) {
+                    synchronized (records) {
+                        records.add(_record);
+                    }
+                }
+                record.setAfterTimestamp(stamp.getTime());
                 RecordMetadata metadata = producer.send(record, cb).get();
-            } catch (Exception e) {
-                e.printStackTrace();
+
+                if (throttler.shouldThrottle(i, sendStartMs)) {
+                    throttler.throttle();
+                }
+                //Thread.sleep(rd.nextInt(11) + 10);
             }
-            if (throttler.shouldThrottle(i, sendStartMs)) {
-                throttler.throttle();
-            }
+            long stopProduce = System.currentTimeMillis();
+            producer.flush();
+            stats.printTotal();
+            ToolsUtils.printMetrics(producer.metrics());
+            producer.close();
+            finished.set(true);
+            System.out.println("Produce Time: " + (stopProduce - startProduce) / 1000F);
         }
-        producer.flush();
-        stats.printTotal();
-        ToolsUtils.printMetrics(producer.metrics());
-        producer.close();
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+	difuser.join();
+        System.out.println("Aplication time: " + (System.currentTimeMillis() - startApp) / 1000F);
+    }
+
+    private static void send(List<Record> records) {
+        try {
+            Socket socket = new Socket("14.0.0.4", 6666);
+            socket.setSendBufferSize(Integer.MAX_VALUE);
+            ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
+            oos.writeObject(records);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private static Properties newConfig(String topicName, String acks, int qntRecords) {
-        System.out.println("Buscando saber qual o ack: " + acks);
         Properties props = new Properties();
         props.put(ProducerConfig.QNT_REQUESTS, qntRecords);
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+        props.put(ProducerConfig.CLIENT_ID_CONFIG, "producer");
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "14.0.0.1:9092,14.0.0.3:9092,14.0.0.6:9092");
         props.put(ProducerConfig.ACKS_CONFIG, acks);
+	if (acks.equals(-1) || acks.equals(-1))
+            props.put(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, true);
+
         props.put(ProducerConfig.TOPIC_TO_SEND, topicName);
+        //props.put(ProducerConfig.BATCH_SIZE_CONFIG, 11000);
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
-        props.put(ProducerConfig.INTERCEPTOR_CLASSES_CONFIG, Difuser.class.getName());
         return props;
     }
 
@@ -215,3 +281,4 @@ public class ProducerPerformance {
         }
     }
 }
+

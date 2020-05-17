@@ -1,0 +1,5 @@
+Topic to send: test-topic
+Topic to acks: -2
+Records: 50000
+Size:250
+1 records sent, 0,0 records/sec (0,00 MB/sec), 60002,0 ms avg latency, 60002,0 ms max latency.

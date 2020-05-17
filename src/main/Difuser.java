@@ -35,7 +35,7 @@ public class Difuser<K, V> implements ProducerInterceptor<K, V> {
         Record _record = new Record(origem, destino, idSeq, qntRecords, record.key().toString(),
                 record.value().toString(), stamp.getTime());
         record.setAfterTimestamp(stamp.getTime());
-
+	System.out.println("Entrei");
         if (acks.equals("-2")) {
             try {
                 socket = new Socket(ip, port);
@@ -50,7 +50,12 @@ public class Difuser<K, V> implements ProducerInterceptor<K, V> {
     }
 
     @Override
-    public void onAcknowledgement(RecordMetadata metadata, Exception exception) { return; }
+    public void onAcknowledgement(RecordMetadata metadata, Exception exception) { 
+   	//System.out.println(String.format("onAck topic=%s, part=%d, offset=%d\n",
+        //        metadata.topic(), metadata.partition(), metadata.offset()
+        //));
+	return;
+    }
 
     @Override
     public void close() { return; }
@@ -67,7 +72,7 @@ public class Difuser<K, V> implements ProducerInterceptor<K, V> {
         acks = (String) config.get(ProducerConfig.ACKS_CONFIG);
 
         try {
-            this.ip = InetAddress.getByName("localhost");
+            this.ip = InetAddress.getByName("14.0.0.4");
 
         } catch (UnknownHostException e) {
             e.printStackTrace();

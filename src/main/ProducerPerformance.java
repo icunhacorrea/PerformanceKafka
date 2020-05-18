@@ -51,7 +51,7 @@ public class ProducerPerformance {
                 try {
                     while (running) {
                         synchronized (records) {
-                            if (records.size() > 99) {
+                            if (records.size() > 199) {
                                 send(records);
                                 records.clear();
                             }
@@ -95,7 +95,7 @@ public class ProducerPerformance {
                 if (throttler.shouldThrottle(i, sendStartMs)) {
                     throttler.throttle();
                 }
-                Thread.sleep(rd.nextInt(11) + 10);
+                //Thread.sleep(rd.nextInt(11) + 10);
             }
             long stopProduce = System.currentTimeMillis();
             producer.flush();
@@ -115,6 +115,7 @@ public class ProducerPerformance {
     private static void send(List<Record> records) {
         try {
             Socket socket = new Socket("14.0.0.4", 6666);
+	    socket.setTcpNoDelay(true);
             socket.setSendBufferSize(Integer.MAX_VALUE);
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
             oos.writeObject(records);
@@ -132,7 +133,7 @@ public class ProducerPerformance {
         props.put(ProducerConfig.TOPIC_TO_SEND, topicName);
         if (acks.equals(-1) || acks.equals("all"))
             props.put(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, true);
-        props.put(ProducerConfig.BATCH_SIZE_CONFIG, 100);
+        props.put(ProducerConfig.BATCH_SIZE_CONFIG, 11000);
         //props.put(ProducerConfig.RETRIES_CONFIG, 1);
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");

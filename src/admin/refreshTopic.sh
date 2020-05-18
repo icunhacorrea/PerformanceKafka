@@ -14,7 +14,7 @@ $KAFKA_PATH//bin/kafka-configs.sh --zookeeper 14.0.0.1:2181,14.0.0.3:2181,14.0.0
         --add-config retention.ms=1000
 
 
-echo "Esperando 10 segundos para resetar topico."
+echo "Esperando 60 segundos para resetar topico."
 for i in seq {0..60}
 do
 	printf .

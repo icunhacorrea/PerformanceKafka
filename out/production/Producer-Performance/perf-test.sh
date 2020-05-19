@@ -7,6 +7,7 @@ do
 		for i in {0..2}
 		do
 			./admin/refreshTopic.sh
+			./admin/deleteZnodes.sh
 			time ./execute.sh test-topic $ack 50000 $size > logs/log-$ack-$size-$i.out
 			sleep 20
 		done

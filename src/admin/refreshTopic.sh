@@ -11,11 +11,11 @@ echo "Setando retention.ms para 1 seg."
 
 $KAFKA_PATH//bin/kafka-configs.sh --zookeeper 14.0.0.1:2181,14.0.0.3:2181,14.0.0.6:2181 \
         --alter --entity-type topics --entity-name test-topic \
-        --add-config retention.ms=1000
+        --add-config retention.ms=10
 
 
-echo "Esperando 60 segundos para resetar topico."
-for i in seq {0..60}
+echo "Esperando 3 minutos segundos para resetar topico."
+for i in seq {0..240}
 do
 	printf .
 	sleep 1

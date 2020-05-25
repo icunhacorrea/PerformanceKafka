@@ -76,7 +76,7 @@ public class ProducerPerformance {
                 if (throttler.shouldThrottle(i, sendStartMs)) {
                     throttler.throttle();
                 }
-                Thread.sleep(rd.nextInt(31) + 10);
+                //Thread.sleep(rd.nextInt(31) + 10);
             }
             long stopProduce = System.currentTimeMillis();
             producer.flush();
@@ -93,7 +93,7 @@ public class ProducerPerformance {
         System.out.println("Aplication time: " + (System.currentTimeMillis() - startApp) / 1000F);
     }
 
-    private static void send(List<Record> records) {
+    /*private static void send(List<Record> records) {
         try {
             Socket socket = new Socket("127.0.0.1", 6666);
             //Socket socket = new Socket("14.0.0.4", 6666);
@@ -104,19 +104,19 @@ public class ProducerPerformance {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
     private static Properties newConfig(String topicName, String acks, int qntRecords) {
         Properties props = new Properties();
         props.put(ProducerConfig.QNT_REQUESTS, qntRecords);
         props.put(ProducerConfig.CLIENT_ID_CONFIG, "producer-1");
-        //props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "14.0.0.1:9092,14.0.0.3:9092,14.0.0.6:9092");
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "14.0.0.1:9092,14.0.0.3:9092,14.0.0.6:9092");
+        //props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
         props.put(ProducerConfig.ACKS_CONFIG, acks);
         props.put(ProducerConfig.TOPIC_TO_SEND, topicName);
         if (acks.equals(-1) || acks.equals("all"))
             props.put(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, true);
-        props.put(ProducerConfig.BATCH_SIZE_CONFIG, 11000);
+        //props.put(ProducerConfig.BATCH_SIZE_CONFIG, 11000);
         //props.put(ProducerConfig.RETRIES_CONFIG, 1);
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");

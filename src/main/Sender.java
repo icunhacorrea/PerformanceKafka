@@ -34,7 +34,7 @@ public class Sender extends Thread {
         TcpDiscoverySpi spi = new TcpDiscoverySpi();
         TcpDiscoveryMulticastIpFinder tcMp = new TcpDiscoveryMulticastIpFinder();
         IgniteConfiguration cfg = new IgniteConfiguration();
-        tcMp.setAddresses(Arrays.asList("localhost"));
+        tcMp.setAddresses(Arrays.asList("14.0.0.4"));
         spi.setIpFinder(tcMp);
         cfg.setDiscoverySpi(spi);
         cfg.setClientMode(true);
@@ -46,7 +46,7 @@ public class Sender extends Thread {
             synchronized (records) {
                 if (finished.get() == true)
                     running = false;
-                if (records.size() > 499) {
+                if (records.size() > 24) {
 
                     records.forEach(_record -> cache.put(_record.getOrigem() + ";" + _record.getDestino() + ";" +
                             _record.getIdSeq(), _record.getTimeStamp() + ";" + _record.getQntRecords() + ";" +

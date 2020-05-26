@@ -1,8 +1,8 @@
 #!/bin/bash
 
-for ack in -1 0 1
+for ack in -2 # -1 0 1
 do
-	for size in 20000 30000
+	for size in 30000 # 30000
 	do
 		for i in {0..20}
 		do

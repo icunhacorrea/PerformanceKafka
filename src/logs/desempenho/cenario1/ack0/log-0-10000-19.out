@@ -2,25 +2,25 @@ Topic to send: test-topic
 Topic to acks: 0
 Records: 80000
 Size:10000
-5040 records sent, 1007,8 records/sec (9,61 MB/sec), 1,0 ms avg latency, 259,0 ms max latency.
-5533 records sent, 1106,6 records/sec (10,55 MB/sec), 0,9 ms avg latency, 17,0 ms max latency.
-5480 records sent, 1096,0 records/sec (10,45 MB/sec), 0,9 ms avg latency, 30,0 ms max latency.
-5393 records sent, 1078,0 records/sec (10,28 MB/sec), 0,9 ms avg latency, 28,0 ms max latency.
-5466 records sent, 1091,9 records/sec (10,41 MB/sec), 0,9 ms avg latency, 16,0 ms max latency.
-5506 records sent, 1101,2 records/sec (10,50 MB/sec), 0,9 ms avg latency, 14,0 ms max latency.
-5194 records sent, 1038,2 records/sec (9,90 MB/sec), 1,0 ms avg latency, 47,0 ms max latency.
-5411 records sent, 1082,0 records/sec (10,32 MB/sec), 0,9 ms avg latency, 42,0 ms max latency.
-5489 records sent, 1096,3 records/sec (10,45 MB/sec), 0,9 ms avg latency, 16,0 ms max latency.
-5307 records sent, 1061,2 records/sec (10,12 MB/sec), 0,9 ms avg latency, 22,0 ms max latency.
-5455 records sent, 1090,6 records/sec (10,40 MB/sec), 0,9 ms avg latency, 15,0 ms max latency.
-5227 records sent, 1045,2 records/sec (9,97 MB/sec), 0,9 ms avg latency, 187,0 ms max latency.
-5589 records sent, 1117,6 records/sec (10,66 MB/sec), 0,9 ms avg latency, 14,0 ms max latency.
-5514 records sent, 1102,4 records/sec (10,51 MB/sec), 0,9 ms avg latency, 22,0 ms max latency.
-80000 records sent, 1080,176069 records/sec (10,30 MB/sec), 0,91 ms avg latency, 259,00 ms max latency, 0 ms 50th, 4 ms 95th, 6 ms 99th, 12 ms 99.9th.
+5196 records sent, 1038,8 records/sec (9,91 MB/sec), 0,9 ms avg latency, 256,0 ms max latency.
+5493 records sent, 1098,6 records/sec (10,48 MB/sec), 0,9 ms avg latency, 17,0 ms max latency.
+5502 records sent, 1100,0 records/sec (10,49 MB/sec), 0,9 ms avg latency, 17,0 ms max latency.
+5548 records sent, 1109,6 records/sec (10,58 MB/sec), 0,9 ms avg latency, 13,0 ms max latency.
+5507 records sent, 1101,2 records/sec (10,50 MB/sec), 0,9 ms avg latency, 26,0 ms max latency.
+5414 records sent, 1082,6 records/sec (10,32 MB/sec), 0,9 ms avg latency, 35,0 ms max latency.
+5540 records sent, 1107,8 records/sec (10,56 MB/sec), 0,9 ms avg latency, 13,0 ms max latency.
+5553 records sent, 1109,7 records/sec (10,58 MB/sec), 0,9 ms avg latency, 20,0 ms max latency.
+5421 records sent, 1084,2 records/sec (10,34 MB/sec), 0,9 ms avg latency, 12,0 ms max latency.
+5443 records sent, 1088,4 records/sec (10,38 MB/sec), 0,9 ms avg latency, 13,0 ms max latency.
+5459 records sent, 1091,1 records/sec (10,41 MB/sec), 0,9 ms avg latency, 14,0 ms max latency.
+5258 records sent, 1051,6 records/sec (10,03 MB/sec), 0,9 ms avg latency, 65,0 ms max latency.
+5311 records sent, 1062,2 records/sec (10,13 MB/sec), 0,9 ms avg latency, 39,0 ms max latency.
+4539 records sent, 907,4 records/sec (8,65 MB/sec), 1,1 ms avg latency, 796,0 ms max latency.
+80000 records sent, 1074,185968 records/sec (10,24 MB/sec), 0,92 ms avg latency, 796,00 ms max latency, 0 ms 50th, 4 ms 95th, 6 ms 99th, 12 ms 99.9th.
 
 Metric Name                                                                          Value
 app-info:commit-id:{client-id=producer-1}                                          : d4284cbebb6f0a4c
-app-info:start-time-ms:{client-id=producer-1}                                      : 1590035709073
+app-info:start-time-ms:{client-id=producer-1}                                      : 1591562008870
 app-info:version:{client-id=producer-1}                                            : 2.3.1
 kafka-metrics-count:count:{client-id=producer-1}                                   : 126,000
 producer-metrics:batch-size-avg:{client-id=producer-1}                             : 10077,000
@@ -46,15 +46,15 @@ producer-metrics:failed-reauthentication-total:{client-id=producer-1}           
 producer-metrics:incoming-byte-rate:{client-id=producer-1}                         : 0,000
 producer-metrics:incoming-byte-total:{client-id=producer-1}                        : 1461,000
 producer-metrics:io-ratio:{client-id=producer-1}                                   : 0,022
-producer-metrics:io-time-ns-avg:{client-id=producer-1}                             : 8849,804
-producer-metrics:io-wait-ratio:{client-id=producer-1}                              : 0,918
-producer-metrics:io-wait-time-ns-avg:{client-id=producer-1}                        : 364051,391
-producer-metrics:io-waittime-total:{client-id=producer-1}                          : 66446569943,000
-producer-metrics:iotime-total:{client-id=producer-1}                               : 1890311199,000
-producer-metrics:metadata-age:{client-id=producer-1}                               : 73,901
-producer-metrics:network-io-rate:{client-id=producer-1}                            : 1079,067
+producer-metrics:io-time-ns-avg:{client-id=producer-1}                             : 9017,746
+producer-metrics:io-wait-ratio:{client-id=producer-1}                              : 0,916
+producer-metrics:io-wait-time-ns-avg:{client-id=producer-1}                        : 369361,017
+producer-metrics:io-waittime-total:{client-id=producer-1}                          : 66611407970,000
+producer-metrics:iotime-total:{client-id=producer-1}                               : 1904411562,000
+producer-metrics:metadata-age:{client-id=producer-1}                               : 74,313
+producer-metrics:network-io-rate:{client-id=producer-1}                            : 1063,600
 producer-metrics:network-io-total:{client-id=producer-1}                           : 80010,000
-producer-metrics:outgoing-byte-rate:{client-id=producer-1}                         : 10950292,612
+producer-metrics:outgoing-byte-rate:{client-id=producer-1}                         : 10793321,773
 producer-metrics:outgoing-byte-total:{client-id=producer-1}                        : 811749029,000
 producer-metrics:produce-throttle-time-avg:{client-id=producer-1}                  : NaN
 producer-metrics:produce-throttle-time-max:{client-id=producer-1}                  : NaN
@@ -63,25 +63,25 @@ producer-metrics:reauthentication-latency-max:{client-id=producer-1}            
 producer-metrics:record-error-rate:{client-id=producer-1}                          : 0,000
 producer-metrics:record-error-total:{client-id=producer-1}                         : 0,000
 producer-metrics:record-queue-time-avg:{client-id=producer-1}                      : 0,023
-producer-metrics:record-queue-time-max:{client-id=producer-1}                      : 1,000
+producer-metrics:record-queue-time-max:{client-id=producer-1}                      : 3,000
 producer-metrics:record-retry-rate:{client-id=producer-1}                          : 0,000
 producer-metrics:record-retry-total:{client-id=producer-1}                         : 0,000
-producer-metrics:record-send-rate:{client-id=producer-1}                           : 1079,646
+producer-metrics:record-send-rate:{client-id=producer-1}                           : 1063,805
 producer-metrics:record-send-total:{client-id=producer-1}                          : 80000,000
 producer-metrics:record-size-avg:{client-id=producer-1}                            : 10092,000
 producer-metrics:record-size-max:{client-id=producer-1}                            : 10092,000
 producer-metrics:records-per-request-avg:{client-id=producer-1}                    : 1,000
 producer-metrics:request-latency-avg:{client-id=producer-1}                        : NaN
 producer-metrics:request-latency-max:{client-id=producer-1}                        : NaN
-producer-metrics:request-rate:{client-id=producer-1}                               : 1079,092
+producer-metrics:request-rate:{client-id=producer-1}                               : 1063,624
 producer-metrics:request-size-avg:{client-id=producer-1}                           : 10147,000
 producer-metrics:request-size-max:{client-id=producer-1}                           : 10147,000
 producer-metrics:request-total:{client-id=producer-1}                              : 80005,000
 producer-metrics:requests-in-flight:{client-id=producer-1}                         : 0,000
 producer-metrics:response-rate:{client-id=producer-1}                              : 0,000
 producer-metrics:response-total:{client-id=producer-1}                             : 5,000
-producer-metrics:select-rate:{client-id=producer-1}                                : 2521,973
-producer-metrics:select-total:{client-id=producer-1}                               : 185310,000
+producer-metrics:select-rate:{client-id=producer-1}                                : 2479,566
+producer-metrics:select-total:{client-id=producer-1}                               : 184020,000
 producer-metrics:successful-authentication-no-reauth-total:{client-id=producer-1}  : 0,000
 producer-metrics:successful-authentication-rate:{client-id=producer-1}             : 0,000
 producer-metrics:successful-authentication-total:{client-id=producer-1}            : 0,000
@@ -97,9 +97,9 @@ producer-node-metrics:incoming-byte-total:{client-id=producer-1, node-id=node-1}
 producer-node-metrics:incoming-byte-total:{client-id=producer-1, node-id=node-3}   : 294,000
 producer-node-metrics:incoming-byte-total:{client-id=producer-1, node-id=node-6}   : 294,000
 producer-node-metrics:outgoing-byte-rate:{client-id=producer-1, node-id=node--1}   : 0,000
-producer-node-metrics:outgoing-byte-rate:{client-id=producer-1, node-id=node-1}    : 3663448,508
-producer-node-metrics:outgoing-byte-rate:{client-id=producer-1, node-id=node-3}    : 3626044,638
-producer-node-metrics:outgoing-byte-rate:{client-id=producer-1, node-id=node-6}    : 3666831,546
+producer-node-metrics:outgoing-byte-rate:{client-id=producer-1, node-id=node-1}    : 3610038,893
+producer-node-metrics:outgoing-byte-rate:{client-id=producer-1, node-id=node-3}    : 3571896,200
+producer-node-metrics:outgoing-byte-rate:{client-id=producer-1, node-id=node-6}    : 3612705,428
 producer-node-metrics:outgoing-byte-total:{client-id=producer-1, node-id=node--1}  : 67,000
 producer-node-metrics:outgoing-byte-total:{client-id=producer-1, node-id=node-1}   : 271570513,000
 producer-node-metrics:outgoing-byte-total:{client-id=producer-1, node-id=node-3}   : 269358689,000
@@ -113,9 +113,9 @@ producer-node-metrics:request-latency-max:{client-id=producer-1, node-id=node-1}
 producer-node-metrics:request-latency-max:{client-id=producer-1, node-id=node-3}   : NaN
 producer-node-metrics:request-latency-max:{client-id=producer-1, node-id=node-6}   : NaN
 producer-node-metrics:request-rate:{client-id=producer-1, node-id=node--1}         : 0,000
-producer-node-metrics:request-rate:{client-id=producer-1, node-id=node-1}          : 361,021
-producer-node-metrics:request-rate:{client-id=producer-1, node-id=node-3}          : 357,327
-producer-node-metrics:request-rate:{client-id=producer-1, node-id=node-6}          : 361,346
+producer-node-metrics:request-rate:{client-id=producer-1, node-id=node-1}          : 355,766
+producer-node-metrics:request-rate:{client-id=producer-1, node-id=node-3}          : 351,999
+producer-node-metrics:request-rate:{client-id=producer-1, node-id=node-6}          : 356,021
 producer-node-metrics:request-size-avg:{client-id=producer-1, node-id=node--1}     : NaN
 producer-node-metrics:request-size-avg:{client-id=producer-1, node-id=node-1}      : 10147,000
 producer-node-metrics:request-size-avg:{client-id=producer-1, node-id=node-3}      : 10147,000
@@ -136,14 +136,14 @@ producer-node-metrics:response-total:{client-id=producer-1, node-id=node--1}    
 producer-node-metrics:response-total:{client-id=producer-1, node-id=node-1}        : 1,000
 producer-node-metrics:response-total:{client-id=producer-1, node-id=node-3}        : 1,000
 producer-node-metrics:response-total:{client-id=producer-1, node-id=node-6}        : 1,000
-producer-topic-metrics:byte-rate:{client-id=producer-1, topic=test-topic}          : 10879592,920
+producer-topic-metrics:byte-rate:{client-id=producer-1, topic=test-topic}          : 10719505,513
 producer-topic-metrics:byte-total:{client-id=producer-1, topic=test-topic}         : 806148890,000
 producer-topic-metrics:compression-rate:{client-id=producer-1, topic=test-topic}   : 1,000
 producer-topic-metrics:record-error-rate:{client-id=producer-1, topic=test-topic}  : 0,000
 producer-topic-metrics:record-error-total:{client-id=producer-1, topic=test-topic} : 0,000
 producer-topic-metrics:record-retry-rate:{client-id=producer-1, topic=test-topic}  : 0,000
 producer-topic-metrics:record-retry-total:{client-id=producer-1, topic=test-topic} : 0,000
-producer-topic-metrics:record-send-rate:{client-id=producer-1, topic=test-topic}   : 1079,671
+producer-topic-metrics:record-send-rate:{client-id=producer-1, topic=test-topic}   : 1063,784
 producer-topic-metrics:record-send-total:{client-id=producer-1, topic=test-topic}  : 80000,000
-Produce Time: 74.061
-Aplication time: 74.791
+Produce Time: 74.474
+Aplication time: 75.205

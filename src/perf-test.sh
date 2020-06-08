@@ -1,8 +1,8 @@
 #!/bin/bash
 
-for ack in -2 # -1 0 1
+for ack in 0 1
 do
-	for size in 30000 # 30000
+	for size in 10000 20000 30000
 	do
 		for i in {0..20}
 		do
@@ -14,7 +14,8 @@ do
 			#./admin/refreshTopic.sh
 			#./admin/deleteZnodes.sh
 			time ./execute.sh test-topic $ack 80000 $size > logs/log-$ack-$size-$i.out
-			sleep 30
+			sleep 180
 		done
 	done
 done
+

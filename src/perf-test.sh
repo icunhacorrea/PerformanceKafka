@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for ack in 0 1
+for ack in -1
 do
 	for size in 10000 20000 30000
 	do

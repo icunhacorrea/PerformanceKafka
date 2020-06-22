@@ -1,0 +1,389 @@
+Topic to send: test-topic
+Topic to acks: 1
+Records: 80000
+Size:1000
+302 records sent, 60,2 records/sec (0,06 MB/sec), 16,5 ms avg latency, 257,0 ms max latency.
+356 records sent, 69,6 records/sec (0,07 MB/sec), 14,3 ms avg latency, 210,0 ms max latency.
+319 records sent, 58,7 records/sec (0,06 MB/sec), 17,0 ms avg latency, 633,0 ms max latency.
+367 records sent, 73,0 records/sec (0,07 MB/sec), 13,7 ms avg latency, 212,0 ms max latency.
+212 records sent, 40,2 records/sec (0,04 MB/sec), 24,9 ms avg latency, 648,0 ms max latency.
+354 records sent, 70,8 records/sec (0,07 MB/sec), 14,1 ms avg latency, 213,0 ms max latency.
+333 records sent, 64,1 records/sec (0,06 MB/sec), 15,6 ms avg latency, 633,0 ms max latency.
+267 records sent, 52,3 records/sec (0,05 MB/sec), 19,1 ms avg latency, 647,0 ms max latency.
+317 records sent, 61,4 records/sec (0,06 MB/sec), 16,3 ms avg latency, 640,0 ms max latency.
+275 records sent, 54,2 records/sec (0,05 MB/sec), 18,4 ms avg latency, 618,0 ms max latency.
+265 records sent, 51,9 records/sec (0,05 MB/sec), 19,2 ms avg latency, 640,0 ms max latency.
+438 records sent, 85,2 records/sec (0,08 MB/sec), 11,7 ms avg latency, 1520,0 ms max latency.
+307 records sent, 59,8 records/sec (0,06 MB/sec), 16,7 ms avg latency, 620,0 ms max latency.
+290 records sent, 56,3 records/sec (0,05 MB/sec), 17,7 ms avg latency, 642,0 ms max latency.
+454 records sent, 89,3 records/sec (0,09 MB/sec), 11,2 ms avg latency, 209,0 ms max latency.
+241 records sent, 47,7 records/sec (0,05 MB/sec), 20,9 ms avg latency, 211,0 ms max latency.
+234 records sent, 44,3 records/sec (0,04 MB/sec), 22,6 ms avg latency, 653,0 ms max latency.
+336 records sent, 65,4 records/sec (0,06 MB/sec), 15,3 ms avg latency, 627,0 ms max latency.
+248 records sent, 49,2 records/sec (0,05 MB/sec), 20,3 ms avg latency, 627,0 ms max latency.
+237 records sent, 47,1 records/sec (0,04 MB/sec), 21,2 ms avg latency, 634,0 ms max latency.
+217 records sent, 43,1 records/sec (0,04 MB/sec), 23,2 ms avg latency, 647,0 ms max latency.
+258 records sent, 51,2 records/sec (0,05 MB/sec), 19,5 ms avg latency, 631,0 ms max latency.
+333 records sent, 65,0 records/sec (0,06 MB/sec), 15,4 ms avg latency, 630,0 ms max latency.
+321 records sent, 62,9 records/sec (0,06 MB/sec), 15,9 ms avg latency, 209,0 ms max latency.
+351 records sent, 68,0 records/sec (0,06 MB/sec), 14,7 ms avg latency, 641,0 ms max latency.
+449 records sent, 88,5 records/sec (0,08 MB/sec), 11,3 ms avg latency, 648,0 ms max latency.
+228 records sent, 45,3 records/sec (0,04 MB/sec), 22,1 ms avg latency, 635,0 ms max latency.
+306 records sent, 60,1 records/sec (0,06 MB/sec), 16,6 ms avg latency, 618,0 ms max latency.
+219 records sent, 43,4 records/sec (0,04 MB/sec), 23,0 ms avg latency, 648,0 ms max latency.
+417 records sent, 83,4 records/sec (0,08 MB/sec), 12,0 ms avg latency, 634,0 ms max latency.
+287 records sent, 52,3 records/sec (0,05 MB/sec), 19,1 ms avg latency, 638,0 ms max latency.
+310 records sent, 60,2 records/sec (0,06 MB/sec), 16,6 ms avg latency, 649,0 ms max latency.
+243 records sent, 48,3 records/sec (0,05 MB/sec), 20,7 ms avg latency, 647,0 ms max latency.
+311 records sent, 60,7 records/sec (0,06 MB/sec), 16,5 ms avg latency, 647,0 ms max latency.
+421 records sent, 84,2 records/sec (0,08 MB/sec), 11,9 ms avg latency, 628,0 ms max latency.
+226 records sent, 45,0 records/sec (0,04 MB/sec), 22,2 ms avg latency, 642,0 ms max latency.
+193 records sent, 38,3 records/sec (0,04 MB/sec), 26,1 ms avg latency, 1527,0 ms max latency.
+331 records sent, 65,0 records/sec (0,06 MB/sec), 15,4 ms avg latency, 209,0 ms max latency.
+414 records sent, 79,9 records/sec (0,08 MB/sec), 12,5 ms avg latency, 209,0 ms max latency.
+229 records sent, 45,8 records/sec (0,04 MB/sec), 21,8 ms avg latency, 209,0 ms max latency.
+159 records sent, 31,8 records/sec (0,03 MB/sec), 31,4 ms avg latency, 1509,0 ms max latency.
+290 records sent, 57,1 records/sec (0,05 MB/sec), 17,5 ms avg latency, 622,0 ms max latency.
+258 records sent, 51,2 records/sec (0,05 MB/sec), 19,5 ms avg latency, 630,0 ms max latency.
+282 records sent, 51,6 records/sec (0,05 MB/sec), 19,4 ms avg latency, 633,0 ms max latency.
+292 records sent, 57,6 records/sec (0,05 MB/sec), 17,3 ms avg latency, 632,0 ms max latency.
+291 records sent, 57,2 records/sec (0,05 MB/sec), 17,5 ms avg latency, 647,0 ms max latency.
+426 records sent, 82,0 records/sec (0,08 MB/sec), 12,2 ms avg latency, 209,0 ms max latency.
+295 records sent, 53,8 records/sec (0,05 MB/sec), 18,6 ms avg latency, 632,0 ms max latency.
+264 records sent, 52,1 records/sec (0,05 MB/sec), 19,2 ms avg latency, 639,0 ms max latency.
+243 records sent, 45,9 records/sec (0,04 MB/sec), 21,8 ms avg latency, 1529,0 ms max latency.
+162 records sent, 32,4 records/sec (0,03 MB/sec), 30,8 ms avg latency, 1520,0 ms max latency.
+228 records sent, 43,5 records/sec (0,04 MB/sec), 23,0 ms avg latency, 639,0 ms max latency.
+227 records sent, 45,2 records/sec (0,04 MB/sec), 22,1 ms avg latency, 648,0 ms max latency.
+370 records sent, 71,8 records/sec (0,07 MB/sec), 13,9 ms avg latency, 641,0 ms max latency.
+320 records sent, 57,8 records/sec (0,06 MB/sec), 17,3 ms avg latency, 637,0 ms max latency.
+374 records sent, 74,8 records/sec (0,07 MB/sec), 13,4 ms avg latency, 648,0 ms max latency.
+277 records sent, 54,9 records/sec (0,05 MB/sec), 18,2 ms avg latency, 631,0 ms max latency.
+259 records sent, 51,1 records/sec (0,05 MB/sec), 19,5 ms avg latency, 1711,0 ms max latency.
+356 records sent, 69,4 records/sec (0,07 MB/sec), 14,4 ms avg latency, 638,0 ms max latency.
+186 records sent, 34,1 records/sec (0,03 MB/sec), 29,3 ms avg latency, 1507,0 ms max latency.
+375 records sent, 72,6 records/sec (0,07 MB/sec), 13,8 ms avg latency, 635,0 ms max latency.
+230 records sent, 45,4 records/sec (0,04 MB/sec), 22,0 ms avg latency, 1522,0 ms max latency.
+347 records sent, 62,3 records/sec (0,06 MB/sec), 16,0 ms avg latency, 645,0 ms max latency.
+339 records sent, 66,2 records/sec (0,06 MB/sec), 15,1 ms avg latency, 643,0 ms max latency.
+268 records sent, 53,3 records/sec (0,05 MB/sec), 18,7 ms avg latency, 209,0 ms max latency.
+190 records sent, 37,9 records/sec (0,04 MB/sec), 26,3 ms avg latency, 1504,0 ms max latency.
+330 records sent, 62,0 records/sec (0,06 MB/sec), 16,1 ms avg latency, 641,0 ms max latency.
+218 records sent, 38,4 records/sec (0,04 MB/sec), 26,0 ms avg latency, 1503,0 ms max latency.
+341 records sent, 66,8 records/sec (0,06 MB/sec), 14,9 ms avg latency, 227,0 ms max latency.
+255 records sent, 50,6 records/sec (0,05 MB/sec), 19,7 ms avg latency, 634,0 ms max latency.
+264 records sent, 52,2 records/sec (0,05 MB/sec), 19,1 ms avg latency, 646,0 ms max latency.
+336 records sent, 65,6 records/sec (0,06 MB/sec), 15,2 ms avg latency, 210,0 ms max latency.
+387 records sent, 74,9 records/sec (0,07 MB/sec), 13,3 ms avg latency, 636,0 ms max latency.
+322 records sent, 63,5 records/sec (0,06 MB/sec), 15,7 ms avg latency, 619,0 ms max latency.
+130 records sent, 24,9 records/sec (0,02 MB/sec), 40,1 ms avg latency, 1530,0 ms max latency.
+169 records sent, 33,8 records/sec (0,03 MB/sec), 29,6 ms avg latency, 1508,0 ms max latency.
+456 records sent, 90,7 records/sec (0,09 MB/sec), 11,0 ms avg latency, 209,0 ms max latency.
+242 records sent, 48,3 records/sec (0,05 MB/sec), 20,7 ms avg latency, 631,0 ms max latency.
+298 records sent, 58,9 records/sec (0,06 MB/sec), 17,0 ms avg latency, 636,0 ms max latency.
+324 records sent, 58,7 records/sec (0,06 MB/sec), 17,0 ms avg latency, 632,0 ms max latency.
+300 records sent, 59,0 records/sec (0,06 MB/sec), 16,9 ms avg latency, 632,0 ms max latency.
+420 records sent, 80,7 records/sec (0,08 MB/sec), 12,4 ms avg latency, 642,0 ms max latency.
+312 records sent, 61,1 records/sec (0,06 MB/sec), 16,3 ms avg latency, 636,0 ms max latency.
+284 records sent, 56,0 records/sec (0,05 MB/sec), 17,8 ms avg latency, 209,0 ms max latency.
+248 records sent, 49,1 records/sec (0,05 MB/sec), 20,4 ms avg latency, 1494,0 ms max latency.
+372 records sent, 72,4 records/sec (0,07 MB/sec), 13,8 ms avg latency, 624,0 ms max latency.
+300 records sent, 59,3 records/sec (0,06 MB/sec), 16,9 ms avg latency, 209,0 ms max latency.
+332 records sent, 65,2 records/sec (0,06 MB/sec), 15,3 ms avg latency, 641,0 ms max latency.
+267 records sent, 53,0 records/sec (0,05 MB/sec), 18,8 ms avg latency, 637,0 ms max latency.
+220 records sent, 42,1 records/sec (0,04 MB/sec), 23,7 ms avg latency, 648,0 ms max latency.
+284 records sent, 55,9 records/sec (0,05 MB/sec), 17,9 ms avg latency, 643,0 ms max latency.
+332 records sent, 65,1 records/sec (0,06 MB/sec), 15,4 ms avg latency, 630,0 ms max latency.
+227 records sent, 44,5 records/sec (0,04 MB/sec), 22,5 ms avg latency, 1523,0 ms max latency.
+294 records sent, 58,1 records/sec (0,06 MB/sec), 17,2 ms avg latency, 209,0 ms max latency.
+250 records sent, 49,8 records/sec (0,05 MB/sec), 20,1 ms avg latency, 632,0 ms max latency.
+237 records sent, 47,2 records/sec (0,05 MB/sec), 21,2 ms avg latency, 635,0 ms max latency.
+414 records sent, 79,7 records/sec (0,08 MB/sec), 12,5 ms avg latency, 209,0 ms max latency.
+261 records sent, 51,3 records/sec (0,05 MB/sec), 19,5 ms avg latency, 643,0 ms max latency.
+360 records sent, 70,3 records/sec (0,07 MB/sec), 14,2 ms avg latency, 618,0 ms max latency.
+390 records sent, 74,9 records/sec (0,07 MB/sec), 13,3 ms avg latency, 646,0 ms max latency.
+376 records sent, 72,4 records/sec (0,07 MB/sec), 13,8 ms avg latency, 649,0 ms max latency.
+289 records sent, 56,9 records/sec (0,05 MB/sec), 17,6 ms avg latency, 643,0 ms max latency.
+274 records sent, 54,1 records/sec (0,05 MB/sec), 18,5 ms avg latency, 634,0 ms max latency.
+351 records sent, 68,8 records/sec (0,07 MB/sec), 14,5 ms avg latency, 209,0 ms max latency.
+300 records sent, 56,9 records/sec (0,05 MB/sec), 17,6 ms avg latency, 629,0 ms max latency.
+341 records sent, 66,8 records/sec (0,06 MB/sec), 15,0 ms avg latency, 209,0 ms max latency.
+209 records sent, 41,5 records/sec (0,04 MB/sec), 24,1 ms avg latency, 1726,0 ms max latency.
+262 records sent, 52,3 records/sec (0,05 MB/sec), 19,1 ms avg latency, 620,0 ms max latency.
+387 records sent, 75,0 records/sec (0,07 MB/sec), 13,3 ms avg latency, 209,0 ms max latency.
+248 records sent, 49,6 records/sec (0,05 MB/sec), 20,1 ms avg latency, 631,0 ms max latency.
+204 records sent, 40,5 records/sec (0,04 MB/sec), 24,7 ms avg latency, 1521,0 ms max latency.
+435 records sent, 79,3 records/sec (0,08 MB/sec), 12,6 ms avg latency, 641,0 ms max latency.
+312 records sent, 61,4 records/sec (0,06 MB/sec), 16,3 ms avg latency, 222,0 ms max latency.
+374 records sent, 74,8 records/sec (0,07 MB/sec), 13,4 ms avg latency, 647,0 ms max latency.
+234 records sent, 46,6 records/sec (0,04 MB/sec), 21,5 ms avg latency, 644,0 ms max latency.
+387 records sent, 74,8 records/sec (0,07 MB/sec), 13,4 ms avg latency, 209,0 ms max latency.
+310 records sent, 60,5 records/sec (0,06 MB/sec), 16,5 ms avg latency, 647,0 ms max latency.
+313 records sent, 60,8 records/sec (0,06 MB/sec), 16,4 ms avg latency, 647,0 ms max latency.
+196 records sent, 39,2 records/sec (0,04 MB/sec), 25,5 ms avg latency, 640,0 ms max latency.
+155 records sent, 30,6 records/sec (0,03 MB/sec), 32,7 ms avg latency, 1733,0 ms max latency.
+287 records sent, 53,9 records/sec (0,05 MB/sec), 18,5 ms avg latency, 639,0 ms max latency.
+470 records sent, 93,0 records/sec (0,09 MB/sec), 10,7 ms avg latency, 213,0 ms max latency.
+243 records sent, 48,6 records/sec (0,05 MB/sec), 20,6 ms avg latency, 621,0 ms max latency.
+297 records sent, 56,4 records/sec (0,05 MB/sec), 17,7 ms avg latency, 630,0 ms max latency.
+394 records sent, 73,3 records/sec (0,07 MB/sec), 13,6 ms avg latency, 632,0 ms max latency.
+293 records sent, 57,6 records/sec (0,05 MB/sec), 17,4 ms avg latency, 648,0 ms max latency.
+293 records sent, 57,6 records/sec (0,05 MB/sec), 17,3 ms avg latency, 635,0 ms max latency.
+252 records sent, 42,8 records/sec (0,04 MB/sec), 23,4 ms avg latency, 1725,0 ms max latency.
+252 records sent, 50,3 records/sec (0,05 MB/sec), 19,9 ms avg latency, 618,0 ms max latency.
+416 records sent, 80,2 records/sec (0,08 MB/sec), 12,5 ms avg latency, 636,0 ms max latency.
+295 records sent, 58,3 records/sec (0,06 MB/sec), 17,1 ms avg latency, 633,0 ms max latency.
+330 records sent, 64,6 records/sec (0,06 MB/sec), 15,5 ms avg latency, 644,0 ms max latency.
+416 records sent, 80,2 records/sec (0,08 MB/sec), 12,5 ms avg latency, 633,0 ms max latency.
+419 records sent, 80,5 records/sec (0,08 MB/sec), 12,4 ms avg latency, 626,0 ms max latency.
+290 records sent, 45,1 records/sec (0,04 MB/sec), 22,2 ms avg latency, 1515,0 ms max latency.
+327 records sent, 64,2 records/sec (0,06 MB/sec), 15,6 ms avg latency, 642,0 ms max latency.
+366 records sent, 71,0 records/sec (0,07 MB/sec), 14,1 ms avg latency, 641,0 ms max latency.
+348 records sent, 67,4 records/sec (0,06 MB/sec), 14,8 ms avg latency, 644,0 ms max latency.
+419 records sent, 80,7 records/sec (0,08 MB/sec), 12,4 ms avg latency, 630,0 ms max latency.
+368 records sent, 71,8 records/sec (0,07 MB/sec), 13,9 ms avg latency, 624,0 ms max latency.
+193 records sent, 38,6 records/sec (0,04 MB/sec), 25,9 ms avg latency, 648,0 ms max latency.
+497 records sent, 98,4 records/sec (0,09 MB/sec), 10,2 ms avg latency, 209,0 ms max latency.
+397 records sent, 77,1 records/sec (0,07 MB/sec), 13,0 ms avg latency, 209,0 ms max latency.
+295 records sent, 57,8 records/sec (0,06 MB/sec), 17,3 ms avg latency, 641,0 ms max latency.
+308 records sent, 60,9 records/sec (0,06 MB/sec), 16,4 ms avg latency, 209,0 ms max latency.
+344 records sent, 67,4 records/sec (0,06 MB/sec), 14,8 ms avg latency, 628,0 ms max latency.
+297 records sent, 56,2 records/sec (0,05 MB/sec), 17,8 ms avg latency, 649,0 ms max latency.
+449 records sent, 89,8 records/sec (0,09 MB/sec), 11,1 ms avg latency, 209,0 ms max latency.
+233 records sent, 46,1 records/sec (0,04 MB/sec), 21,7 ms avg latency, 647,0 ms max latency.
+330 records sent, 64,8 records/sec (0,06 MB/sec), 15,4 ms avg latency, 626,0 ms max latency.
+223 records sent, 39,7 records/sec (0,04 MB/sec), 25,2 ms avg latency, 646,0 ms max latency.
+403 records sent, 77,6 records/sec (0,07 MB/sec), 12,9 ms avg latency, 209,0 ms max latency.
+255 records sent, 50,8 records/sec (0,05 MB/sec), 19,7 ms avg latency, 637,0 ms max latency.
+329 records sent, 64,3 records/sec (0,06 MB/sec), 15,5 ms avg latency, 209,0 ms max latency.
+283 records sent, 56,1 records/sec (0,05 MB/sec), 17,8 ms avg latency, 638,0 ms max latency.
+398 records sent, 76,9 records/sec (0,07 MB/sec), 13,0 ms avg latency, 219,0 ms max latency.
+310 records sent, 55,9 records/sec (0,05 MB/sec), 17,9 ms avg latency, 643,0 ms max latency.
+324 records sent, 63,9 records/sec (0,06 MB/sec), 15,6 ms avg latency, 623,0 ms max latency.
+241 records sent, 45,8 records/sec (0,04 MB/sec), 21,8 ms avg latency, 647,0 ms max latency.
+330 records sent, 64,6 records/sec (0,06 MB/sec), 15,5 ms avg latency, 637,0 ms max latency.
+220 records sent, 44,0 records/sec (0,04 MB/sec), 22,7 ms avg latency, 644,0 ms max latency.
+300 records sent, 59,3 records/sec (0,06 MB/sec), 16,8 ms avg latency, 209,0 ms max latency.
+331 records sent, 65,0 records/sec (0,06 MB/sec), 15,4 ms avg latency, 622,0 ms max latency.
+348 records sent, 67,8 records/sec (0,06 MB/sec), 14,7 ms avg latency, 642,0 ms max latency.
+362 records sent, 65,2 records/sec (0,06 MB/sec), 15,3 ms avg latency, 632,0 ms max latency.
+394 records sent, 72,4 records/sec (0,07 MB/sec), 13,8 ms avg latency, 641,0 ms max latency.
+332 records sent, 65,0 records/sec (0,06 MB/sec), 15,4 ms avg latency, 619,0 ms max latency.
+355 records sent, 69,1 records/sec (0,07 MB/sec), 14,5 ms avg latency, 634,0 ms max latency.
+292 records sent, 57,1 records/sec (0,05 MB/sec), 17,5 ms avg latency, 1509,0 ms max latency.
+215 records sent, 43,0 records/sec (0,04 MB/sec), 23,2 ms avg latency, 640,0 ms max latency.
+330 records sent, 64,7 records/sec (0,06 MB/sec), 15,4 ms avg latency, 624,0 ms max latency.
+278 records sent, 54,9 records/sec (0,05 MB/sec), 18,2 ms avg latency, 630,0 ms max latency.
+396 records sent, 76,7 records/sec (0,07 MB/sec), 13,0 ms avg latency, 209,0 ms max latency.
+285 records sent, 54,0 records/sec (0,05 MB/sec), 18,5 ms avg latency, 644,0 ms max latency.
+431 records sent, 86,2 records/sec (0,08 MB/sec), 11,6 ms avg latency, 645,0 ms max latency.
+238 records sent, 47,4 records/sec (0,05 MB/sec), 21,1 ms avg latency, 635,0 ms max latency.
+460 records sent, 91,7 records/sec (0,09 MB/sec), 10,9 ms avg latency, 209,0 ms max latency.
+366 records sent, 70,8 records/sec (0,07 MB/sec), 14,1 ms avg latency, 636,0 ms max latency.
+399 records sent, 76,7 records/sec (0,07 MB/sec), 13,0 ms avg latency, 649,0 ms max latency.
+280 records sent, 55,4 records/sec (0,05 MB/sec), 18,0 ms avg latency, 631,0 ms max latency.
+257 records sent, 47,0 records/sec (0,04 MB/sec), 21,3 ms avg latency, 639,0 ms max latency.
+349 records sent, 63,1 records/sec (0,06 MB/sec), 15,8 ms avg latency, 632,0 ms max latency.
+288 records sent, 56,5 records/sec (0,05 MB/sec), 17,7 ms avg latency, 646,0 ms max latency.
+381 records sent, 76,2 records/sec (0,07 MB/sec), 13,1 ms avg latency, 636,0 ms max latency.
+351 records sent, 68,4 records/sec (0,07 MB/sec), 14,6 ms avg latency, 639,0 ms max latency.
+287 records sent, 56,7 records/sec (0,05 MB/sec), 17,6 ms avg latency, 619,0 ms max latency.
+457 records sent, 87,2 records/sec (0,08 MB/sec), 11,4 ms avg latency, 632,0 ms max latency.
+288 records sent, 54,2 records/sec (0,05 MB/sec), 18,4 ms avg latency, 643,0 ms max latency.
+438 records sent, 87,2 records/sec (0,08 MB/sec), 11,4 ms avg latency, 225,0 ms max latency.
+278 records sent, 54,2 records/sec (0,05 MB/sec), 18,4 ms avg latency, 649,0 ms max latency.
+156 records sent, 30,0 records/sec (0,03 MB/sec), 33,3 ms avg latency, 1506,0 ms max latency.
+326 records sent, 64,0 records/sec (0,06 MB/sec), 15,6 ms avg latency, 624,0 ms max latency.
+428 records sent, 82,2 records/sec (0,08 MB/sec), 12,1 ms avg latency, 209,0 ms max latency.
+389 records sent, 75,3 records/sec (0,07 MB/sec), 13,3 ms avg latency, 623,0 ms max latency.
+436 records sent, 87,2 records/sec (0,08 MB/sec), 11,5 ms avg latency, 209,0 ms max latency.
+345 records sent, 66,7 records/sec (0,06 MB/sec), 15,0 ms avg latency, 647,0 ms max latency.
+274 records sent, 54,1 records/sec (0,05 MB/sec), 18,5 ms avg latency, 632,0 ms max latency.
+478 records sent, 94,1 records/sec (0,09 MB/sec), 10,6 ms avg latency, 649,0 ms max latency.
+389 records sent, 75,0 records/sec (0,07 MB/sec), 13,3 ms avg latency, 636,0 ms max latency.
+360 records sent, 69,5 records/sec (0,07 MB/sec), 14,4 ms avg latency, 638,0 ms max latency.
+362 records sent, 69,7 records/sec (0,07 MB/sec), 14,3 ms avg latency, 638,0 ms max latency.
+232 records sent, 46,4 records/sec (0,04 MB/sec), 21,6 ms avg latency, 209,0 ms max latency.
+396 records sent, 76,2 records/sec (0,07 MB/sec), 13,1 ms avg latency, 644,0 ms max latency.
+323 records sent, 62,7 records/sec (0,06 MB/sec), 16,0 ms avg latency, 641,0 ms max latency.
+343 records sent, 61,9 records/sec (0,06 MB/sec), 16,2 ms avg latency, 633,0 ms max latency.
+454 records sent, 83,5 records/sec (0,08 MB/sec), 12,0 ms avg latency, 632,0 ms max latency.
+304 records sent, 60,0 records/sec (0,06 MB/sec), 16,7 ms avg latency, 209,0 ms max latency.
+308 records sent, 60,4 records/sec (0,06 MB/sec), 16,5 ms avg latency, 631,0 ms max latency.
+343 records sent, 66,2 records/sec (0,06 MB/sec), 15,1 ms avg latency, 643,0 ms max latency.
+217 records sent, 43,2 records/sec (0,04 MB/sec), 23,1 ms avg latency, 642,0 ms max latency.
+300 records sent, 58,4 records/sec (0,06 MB/sec), 17,1 ms avg latency, 640,0 ms max latency.
+348 records sent, 67,9 records/sec (0,06 MB/sec), 14,7 ms avg latency, 209,0 ms max latency.
+293 records sent, 57,5 records/sec (0,05 MB/sec), 17,4 ms avg latency, 644,0 ms max latency.
+330 records sent, 64,5 records/sec (0,06 MB/sec), 15,5 ms avg latency, 209,0 ms max latency.
+369 records sent, 71,6 records/sec (0,07 MB/sec), 13,9 ms avg latency, 627,0 ms max latency.
+225 records sent, 41,1 records/sec (0,04 MB/sec), 24,3 ms avg latency, 1715,0 ms max latency.
+437 records sent, 87,3 records/sec (0,08 MB/sec), 11,5 ms avg latency, 209,0 ms max latency.
+434 records sent, 86,8 records/sec (0,08 MB/sec), 11,5 ms avg latency, 630,0 ms max latency.
+387 records sent, 74,6 records/sec (0,07 MB/sec), 13,4 ms avg latency, 646,0 ms max latency.
+338 records sent, 60,7 records/sec (0,06 MB/sec), 16,5 ms avg latency, 639,0 ms max latency.
+325 records sent, 58,2 records/sec (0,06 MB/sec), 17,2 ms avg latency, 1505,0 ms max latency.
+322 records sent, 63,3 records/sec (0,06 MB/sec), 15,8 ms avg latency, 209,0 ms max latency.
+249 records sent, 49,1 records/sec (0,05 MB/sec), 20,4 ms avg latency, 643,0 ms max latency.
+309 records sent, 60,9 records/sec (0,06 MB/sec), 16,4 ms avg latency, 209,0 ms max latency.
+279 records sent, 50,9 records/sec (0,05 MB/sec), 19,6 ms avg latency, 622,0 ms max latency.
+223 records sent, 42,8 records/sec (0,04 MB/sec), 23,4 ms avg latency, 636,0 ms max latency.
+355 records sent, 68,9 records/sec (0,07 MB/sec), 14,5 ms avg latency, 213,0 ms max latency.
+445 records sent, 85,5 records/sec (0,08 MB/sec), 11,7 ms avg latency, 209,0 ms max latency.
+307 records sent, 60,2 records/sec (0,06 MB/sec), 16,6 ms avg latency, 637,0 ms max latency.
+419 records sent, 83,5 records/sec (0,08 MB/sec), 12,0 ms avg latency, 637,0 ms max latency.
+277 records sent, 46,5 records/sec (0,04 MB/sec), 21,5 ms avg latency, 1525,0 ms max latency.
+368 records sent, 71,6 records/sec (0,07 MB/sec), 14,0 ms avg latency, 630,0 ms max latency.
+398 records sent, 76,5 records/sec (0,07 MB/sec), 13,0 ms avg latency, 632,0 ms max latency.
+355 records sent, 69,3 records/sec (0,07 MB/sec), 14,4 ms avg latency, 209,0 ms max latency.
+363 records sent, 70,9 records/sec (0,07 MB/sec), 14,1 ms avg latency, 209,0 ms max latency.
+279 records sent, 54,6 records/sec (0,05 MB/sec), 18,3 ms avg latency, 1732,0 ms max latency.
+359 records sent, 69,9 records/sec (0,07 MB/sec), 14,3 ms avg latency, 639,0 ms max latency.
+471 records sent, 93,8 records/sec (0,09 MB/sec), 10,6 ms avg latency, 627,0 ms max latency.
+308 records sent, 60,8 records/sec (0,06 MB/sec), 16,4 ms avg latency, 635,0 ms max latency.
+485 records sent, 92,8 records/sec (0,09 MB/sec), 10,8 ms avg latency, 621,0 ms max latency.
+321 records sent, 53,8 records/sec (0,05 MB/sec), 18,6 ms avg latency, 1530,0 ms max latency.
+287 records sent, 56,5 records/sec (0,05 MB/sec), 17,7 ms avg latency, 644,0 ms max latency.
+349 records sent, 68,1 records/sec (0,06 MB/sec), 14,7 ms avg latency, 627,0 ms max latency.
+308 records sent, 60,7 records/sec (0,06 MB/sec), 16,5 ms avg latency, 628,0 ms max latency.
+330 records sent, 65,0 records/sec (0,06 MB/sec), 15,4 ms avg latency, 209,0 ms max latency.
+257 records sent, 50,8 records/sec (0,05 MB/sec), 19,7 ms avg latency, 644,0 ms max latency.
+270 records sent, 49,3 records/sec (0,05 MB/sec), 20,3 ms avg latency, 640,0 ms max latency.
+381 records sent, 74,0 records/sec (0,07 MB/sec), 13,5 ms avg latency, 209,0 ms max latency.
+372 records sent, 72,3 records/sec (0,07 MB/sec), 13,8 ms avg latency, 636,0 ms max latency.
+280 records sent, 55,2 records/sec (0,05 MB/sec), 18,1 ms avg latency, 647,0 ms max latency.
+305 records sent, 60,1 records/sec (0,06 MB/sec), 16,6 ms avg latency, 642,0 ms max latency.
+240 records sent, 47,3 records/sec (0,05 MB/sec), 21,1 ms avg latency, 1516,0 ms max latency.
+80000 records sent, 61,347858 records/sec (0,06 MB/sec), 16,29 ms avg latency, 1733,00 ms max latency, 1 ms 50th, 206 ms 95th, 209 ms 99th, 644 ms 99.9th.
+
+Metric Name                                                                          Value
+app-info:commit-id:{client-id=producer-1}                                          : d4284cbebb6f0a4c
+app-info:start-time-ms:{client-id=producer-1}                                      : 1592760197355
+app-info:version:{client-id=producer-1}                                            : 2.3.1
+kafka-metrics-count:count:{client-id=producer-1}                                   : 126,000
+producer-metrics:batch-size-avg:{client-id=producer-1}                             : 1075,000
+producer-metrics:batch-size-max:{client-id=producer-1}                             : 1075,000
+producer-metrics:batch-split-rate:{client-id=producer-1}                           : 0,000
+producer-metrics:batch-split-total:{client-id=producer-1}                          : 0,000
+producer-metrics:buffer-available-bytes:{client-id=producer-1}                     : 33554432,000
+producer-metrics:buffer-exhausted-rate:{client-id=producer-1}                      : 0,000
+producer-metrics:buffer-exhausted-total:{client-id=producer-1}                     : 0,000
+producer-metrics:buffer-total-bytes:{client-id=producer-1}                         : 33554432,000
+producer-metrics:bufferpool-wait-ratio:{client-id=producer-1}                      : 0,000
+producer-metrics:bufferpool-wait-time-total:{client-id=producer-1}                 : 0,000
+producer-metrics:compression-rate-avg:{client-id=producer-1}                       : 1,000
+producer-metrics:connection-close-rate:{client-id=producer-1}                      : 0,029
+producer-metrics:connection-close-total:{client-id=producer-1}                     : 29,000
+producer-metrics:connection-count:{client-id=producer-1}                           : 3,000
+producer-metrics:connection-creation-rate:{client-id=producer-1}                   : 0,029
+producer-metrics:connection-creation-total:{client-id=producer-1}                  : 32,000
+producer-metrics:failed-authentication-rate:{client-id=producer-1}                 : 0,000
+producer-metrics:failed-authentication-total:{client-id=producer-1}                : 0,000
+producer-metrics:failed-reauthentication-rate:{client-id=producer-1}               : 0,000
+producer-metrics:failed-reauthentication-total:{client-id=producer-1}              : 0,000
+producer-metrics:incoming-byte-rate:{client-id=producer-1}                         : 3658,658
+producer-metrics:incoming-byte-total:{client-id=producer-1}                        : 4977958,000
+producer-metrics:io-ratio:{client-id=producer-1}                                   : 0,002
+producer-metrics:io-time-ns-avg:{client-id=producer-1}                             : 11533,134
+producer-metrics:io-wait-ratio:{client-id=producer-1}                              : 0,999
+producer-metrics:io-wait-time-ns-avg:{client-id=producer-1}                        : 5664918,063
+producer-metrics:io-waittime-total:{client-id=producer-1}                          : 1294900249800,000
+producer-metrics:iotime-total:{client-id=producer-1}                               : 3187377178,000
+producer-metrics:metadata-age:{client-id=producer-1}                               : 4,474
+producer-metrics:network-io-rate:{client-id=producer-1}                            : 117,641
+producer-metrics:network-io-total:{client-id=producer-1}                           : 160152,000
+producer-metrics:outgoing-byte-rate:{client-id=producer-1}                         : 67299,273
+producer-metrics:outgoing-byte-total:{client-id=producer-1}                        : 91623007,000
+producer-metrics:produce-throttle-time-avg:{client-id=producer-1}                  : 0,000
+producer-metrics:produce-throttle-time-max:{client-id=producer-1}                  : 0,000
+producer-metrics:reauthentication-latency-avg:{client-id=producer-1}               : NaN
+producer-metrics:reauthentication-latency-max:{client-id=producer-1}               : NaN
+producer-metrics:record-error-rate:{client-id=producer-1}                          : 0,000
+producer-metrics:record-error-total:{client-id=producer-1}                         : 0,000
+producer-metrics:record-queue-time-avg:{client-id=producer-1}                      : 0,676
+producer-metrics:record-queue-time-max:{client-id=producer-1}                      : 1515,000
+producer-metrics:record-retry-rate:{client-id=producer-1}                          : 0,029
+producer-metrics:record-retry-total:{client-id=producer-1}                         : 28,000
+producer-metrics:record-send-rate:{client-id=producer-1}                           : 58,771
+producer-metrics:record-send-total:{client-id=producer-1}                          : 80028,000
+producer-metrics:record-size-avg:{client-id=producer-1}                            : 1091,000
+producer-metrics:record-size-max:{client-id=producer-1}                            : 1091,000
+producer-metrics:records-per-request-avg:{client-id=producer-1}                    : 1,000
+producer-metrics:request-latency-avg:{client-id=producer-1}                        : 16,391
+producer-metrics:request-latency-max:{client-id=producer-1}                        : 649,000
+producer-metrics:request-rate:{client-id=producer-1}                               : 58,822
+producer-metrics:request-size-avg:{client-id=producer-1}                           : 1144,029
+producer-metrics:request-size-max:{client-id=producer-1}                           : 1145,000
+producer-metrics:request-total:{client-id=producer-1}                              : 80090,000
+producer-metrics:requests-in-flight:{client-id=producer-1}                         : 0,000
+producer-metrics:response-rate:{client-id=producer-1}                              : 58,821
+producer-metrics:response-total:{client-id=producer-1}                             : 80062,000
+producer-metrics:select-rate:{client-id=producer-1}                                : 176,389
+producer-metrics:select-total:{client-id=producer-1}                               : 239736,000
+producer-metrics:successful-authentication-no-reauth-total:{client-id=producer-1}  : 0,000
+producer-metrics:successful-authentication-rate:{client-id=producer-1}             : 0,000
+producer-metrics:successful-authentication-total:{client-id=producer-1}            : 0,000
+producer-metrics:successful-reauthentication-rate:{client-id=producer-1}           : 0,000
+producer-metrics:successful-reauthentication-total:{client-id=producer-1}          : 0,000
+producer-metrics:waiting-threads:{client-id=producer-1}                            : 0,000
+producer-node-metrics:incoming-byte-rate:{client-id=producer-1, node-id=node--1}   : 0,000
+producer-node-metrics:incoming-byte-rate:{client-id=producer-1, node-id=node-1}    : 1226,845
+producer-node-metrics:incoming-byte-rate:{client-id=producer-1, node-id=node-3}    : 1225,746
+producer-node-metrics:incoming-byte-rate:{client-id=producer-1, node-id=node-6}    : 1211,252
+producer-node-metrics:incoming-byte-total:{client-id=producer-1, node-id=node--1}  : 579,000
+producer-node-metrics:incoming-byte-total:{client-id=producer-1, node-id=node-1}   : 1651918,000
+producer-node-metrics:incoming-byte-total:{client-id=producer-1, node-id=node-3}   : 1661434,000
+producer-node-metrics:incoming-byte-total:{client-id=producer-1, node-id=node-6}   : 1664027,000
+producer-node-metrics:outgoing-byte-rate:{client-id=producer-1, node-id=node--1}   : 0,000
+producer-node-metrics:outgoing-byte-rate:{client-id=producer-1, node-id=node-1}    : 22204,879
+producer-node-metrics:outgoing-byte-rate:{client-id=producer-1, node-id=node-3}    : 22637,406
+producer-node-metrics:outgoing-byte-rate:{client-id=producer-1, node-id=node-6}    : 22456,557
+producer-node-metrics:outgoing-byte-total:{client-id=producer-1, node-id=node--1}  : 67,000
+producer-node-metrics:outgoing-byte-total:{client-id=producer-1, node-id=node-1}   : 30401465,000
+producer-node-metrics:outgoing-byte-total:{client-id=producer-1, node-id=node-3}   : 30568585,000
+producer-node-metrics:outgoing-byte-total:{client-id=producer-1, node-id=node-6}   : 30652890,000
+producer-node-metrics:request-latency-avg:{client-id=producer-1, node-id=node--1}  : NaN
+producer-node-metrics:request-latency-avg:{client-id=producer-1, node-id=node-1}   : 17,053
+producer-node-metrics:request-latency-avg:{client-id=producer-1, node-id=node-3}   : 15,623
+producer-node-metrics:request-latency-avg:{client-id=producer-1, node-id=node-6}   : 15,571
+producer-node-metrics:request-latency-max:{client-id=producer-1, node-id=node--1}  : NaN
+producer-node-metrics:request-latency-max:{client-id=producer-1, node-id=node-1}   : 649,000
+producer-node-metrics:request-latency-max:{client-id=producer-1, node-id=node-3}   : 646,000
+producer-node-metrics:request-latency-max:{client-id=producer-1, node-id=node-6}   : 640,000
+producer-node-metrics:request-rate:{client-id=producer-1, node-id=node--1}         : 0,000
+producer-node-metrics:request-rate:{client-id=producer-1, node-id=node-1}          : 19,418
+producer-node-metrics:request-rate:{client-id=producer-1, node-id=node-3}          : 19,770
+producer-node-metrics:request-rate:{client-id=producer-1, node-id=node-6}          : 19,638
+producer-node-metrics:request-size-avg:{client-id=producer-1, node-id=node--1}     : NaN
+producer-node-metrics:request-size-avg:{client-id=producer-1, node-id=node-1}      : 1143,490
+producer-node-metrics:request-size-avg:{client-id=producer-1, node-id=node-3}      : 1145,000
+producer-node-metrics:request-size-avg:{client-id=producer-1, node-id=node-6}      : 1143,437
+producer-node-metrics:request-size-max:{client-id=producer-1, node-id=node--1}     : NaN
+producer-node-metrics:request-size-max:{client-id=producer-1, node-id=node-1}      : 1145,000
+producer-node-metrics:request-size-max:{client-id=producer-1, node-id=node-3}      : 1145,000
+producer-node-metrics:request-size-max:{client-id=producer-1, node-id=node-6}      : 1145,000
+producer-node-metrics:request-total:{client-id=producer-1, node-id=node--1}        : 2,000
+producer-node-metrics:request-total:{client-id=producer-1, node-id=node-1}         : 26575,000
+producer-node-metrics:request-total:{client-id=producer-1, node-id=node-3}         : 26723,000
+producer-node-metrics:request-total:{client-id=producer-1, node-id=node-6}         : 26790,000
+producer-node-metrics:response-rate:{client-id=producer-1, node-id=node--1}        : 0,000
+producer-node-metrics:response-rate:{client-id=producer-1, node-id=node-1}         : 19,694
+producer-node-metrics:response-rate:{client-id=producer-1, node-id=node-3}         : 19,770
+producer-node-metrics:response-rate:{client-id=producer-1, node-id=node-6}         : 19,431
+producer-node-metrics:response-total:{client-id=producer-1, node-id=node--1}       : 2,000
+producer-node-metrics:response-total:{client-id=producer-1, node-id=node-1}        : 26567,000
+producer-node-metrics:response-total:{client-id=producer-1, node-id=node-3}        : 26713,000
+producer-node-metrics:response-total:{client-id=producer-1, node-id=node-6}        : 26780,000
+producer-topic-metrics:byte-rate:{client-id=producer-1, topic=test-topic}          : 63178,419
+producer-topic-metrics:byte-total:{client-id=producer-1, topic=test-topic}         : 86018989,000
+producer-topic-metrics:compression-rate:{client-id=producer-1, topic=test-topic}   : 1,000
+producer-topic-metrics:record-error-rate:{client-id=producer-1, topic=test-topic}  : 0,000
+producer-topic-metrics:record-error-total:{client-id=producer-1, topic=test-topic} : 0,000
+producer-topic-metrics:record-retry-rate:{client-id=producer-1, topic=test-topic}  : 0,029
+producer-topic-metrics:record-retry-total:{client-id=producer-1, topic=test-topic} : 28,000
+producer-topic-metrics:record-send-rate:{client-id=producer-1, topic=test-topic}   : 58,771
+producer-topic-metrics:record-send-total:{client-id=producer-1, topic=test-topic}  : 80028,000
+Produce Time: 1304.038
+Aplication time: 1304.711
+*****Produção finalizada, esperando 180 s para buscar WM*****
+Water mark: 880000

@@ -2,11 +2,11 @@
 
 KAFKA_PATH=/opt/kafka
 
-for ack in -2 #
+for ack in 0 #
 do
 	for size in 1000
 	do
-		for i in {0..25}
+		for i in {0..21}
 		do
 			n=$(( i % 10 ))
 			if [ $n -eq 0 ]; then

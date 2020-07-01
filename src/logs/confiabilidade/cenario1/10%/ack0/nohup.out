@@ -1,0 +1,202 @@
+Setando retention.ms para 1 seg.
+Completed Updating config for entity: topic 'test-topic'.
+Esperando 3 minutos segundos para resetar topico.
+..................................................................................................................................................................................................................................................
+Restaurando config  default.
+Completed Updating config for entity: topic 'test-topic'.
+Metadata for test-topic (from broker 3: 14.0.0.3:9092/3):
+ 3 brokers:
+  broker 3 at 14.0.0.3:9092
+  broker 1 at 14.0.0.1:9092
+  broker 6 at 14.0.0.6:9092
+ 1 topics:
+  topic "test-topic" with 3 partitions:
+    partition 0, leader 3, replicas: 3,1,6, isrs: 3,1,6
+    partition 1, leader 1, replicas: 1,6,3, isrs: 1,6,3
+    partition 2, leader 6, replicas: 6,3,1, isrs: 6,3,1
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	2m38,324s
+user	0m21,067s
+sys	0m2,152s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	2m31,044s
+user	0m20,149s
+sys	0m2,202s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	2m36,982s
+user	0m20,608s
+sys	0m2,316s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	2m34,753s
+user	0m18,765s
+sys	0m2,397s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	2m40,493s
+user	0m19,256s
+sys	0m2,451s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	2m37,778s
+user	0m19,827s
+sys	0m2,350s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	2m35,804s
+user	0m20,203s
+sys	0m2,301s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	2m41,504s
+user	0m18,255s
+sys	0m2,436s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	2m42,538s
+user	0m19,917s
+sys	0m2,279s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	2m48,126s
+user	0m19,372s
+sys	0m2,607s
+Setando retention.ms para 1 seg.
+Completed Updating config for entity: topic 'test-topic'.
+Esperando 3 minutos segundos para resetar topico.
+..................................................................................................................................................................................................................................................
+Restaurando config  default.
+Completed Updating config for entity: topic 'test-topic'.
+Metadata for test-topic (from broker 3: 14.0.0.3:9092/3):
+ 3 brokers:
+  broker 3 at 14.0.0.3:9092
+  broker 1 at 14.0.0.1:9092
+  broker 6 at 14.0.0.6:9092
+ 1 topics:
+  topic "test-topic" with 3 partitions:
+    partition 0, leader 3, replicas: 3,1,6, isrs: 3,1,6
+    partition 1, leader 1, replicas: 1,6,3, isrs: 1,6,3
+    partition 2, leader 6, replicas: 6,3,1, isrs: 6,3,1
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	2m37,241s
+user	0m20,194s
+sys	0m2,421s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	2m38,540s
+user	0m18,799s
+sys	0m2,228s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	2m40,780s
+user	0m20,116s
+sys	0m2,396s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	2m38,771s
+user	0m21,296s
+sys	0m2,615s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	2m40,497s
+user	0m20,524s
+sys	0m2,458s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	2m34,592s
+user	0m19,709s
+sys	0m2,239s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	2m44,573s
+user	0m19,915s
+sys	0m2,531s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	2m49,650s
+user	0m20,228s
+sys	0m2,317s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	2m35,846s
+user	0m20,499s
+sys	0m2,558s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	2m27,331s
+user	0m18,957s
+sys	0m2,341s
+Setando retention.ms para 1 seg.
+Completed Updating config for entity: topic 'test-topic'.
+Esperando 3 minutos segundos para resetar topico.
+..................................................................................................................................................................................................................................................
+Restaurando config  default.
+Completed Updating config for entity: topic 'test-topic'.
+Metadata for test-topic (from broker 3: 14.0.0.3:9092/3):
+ 3 brokers:
+  broker 3 at 14.0.0.3:9092
+  broker 1 at 14.0.0.1:9092
+  broker 6 at 14.0.0.6:9092
+ 1 topics:
+  topic "test-topic" with 3 partitions:
+    partition 0, leader 3, replicas: 3,1,6, isrs: 3,1,6
+    partition 1, leader 1, replicas: 1,6,3, isrs: 1,6,3
+    partition 2, leader 6, replicas: 6,3,1, isrs: 6,3,1
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	2m31,691s
+user	0m20,793s
+sys	0m2,415s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	2m27,339s
+user	0m19,929s
+sys	0m2,695s

@@ -7,3 +7,4 @@ sudo sysctl -w net.ipv4.tcp_syn_retries=1
 sudo sysctl -w net.ipv4.tcp_fack=0
 sudo sysctl -w net.ipv4.tcp_dsack=0
 sudo sysctl -w net.ipv4.tcp_sack=0
+

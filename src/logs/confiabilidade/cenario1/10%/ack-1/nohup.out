@@ -1,0 +1,281 @@
+Setando retention.ms para 1 seg.
+Completed Updating config for entity: topic 'test-topic'.
+Esperando 3 minutos segundos para resetar topico.
+..................................................................................................................................................................................................................................................
+Restaurando config  default.
+Completed Updating config for entity: topic 'test-topic'.
+Metadata for test-topic (from broker 3: 14.0.0.3:9092/3):
+ 3 brokers:
+  broker 3 at 14.0.0.3:9092
+  broker 1 at 14.0.0.1:9092
+  broker 6 at 14.0.0.6:9092
+ 1 topics:
+  topic "test-topic" with 3 partitions:
+    partition 0, leader 6, replicas: 6,3,1, isrs: 6,3,1
+    partition 1, leader 3, replicas: 3,1,6, isrs: 3,1,6
+    partition 2, leader 1, replicas: 1,6,3, isrs: 1,6,3
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	38m0,029s
+user	0m26,277s
+sys	0m4,314s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+org.apache.kafka.common.errors.NetworkException: The server disconnected before a response was received.
+java.util.concurrent.ExecutionException: org.apache.kafka.common.errors.NetworkException: The server disconnected before a response was received.
+	at org.apache.kafka.clients.producer.internals.FutureRecordMetadata.valueOrError(FutureRecordMetadata.java:98)
+	at org.apache.kafka.clients.producer.internals.FutureRecordMetadata.get(FutureRecordMetadata.java:67)
+	at org.apache.kafka.clients.producer.internals.FutureRecordMetadata.get(FutureRecordMetadata.java:30)
+	at main.ProducerPerformance.main(ProducerPerformance.java:73)
+Caused by: org.apache.kafka.common.errors.NetworkException: The server disconnected before a response was received.
+
+real	34m54,033s
+user	0m26,615s
+sys	0m3,918s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	37m10,633s
+user	0m30,439s
+sys	0m4,520s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	36m22,948s
+user	0m27,339s
+sys	0m4,389s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	36m10,032s
+user	0m26,170s
+sys	0m4,419s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	36m34,656s
+user	0m28,665s
+sys	0m4,383s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	37m49,268s
+user	0m26,361s
+sys	0m4,559s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	38m2,161s
+user	0m26,305s
+sys	0m4,515s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	37m13,683s
+user	0m27,129s
+sys	0m4,280s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	36m0,860s
+user	0m27,414s
+sys	0m4,530s
+Setando retention.ms para 1 seg.
+Completed Updating config for entity: topic 'test-topic'.
+Esperando 3 minutos segundos para resetar topico.
+..................................................................................................................................................................................................................................................
+Restaurando config  default.
+Completed Updating config for entity: topic 'test-topic'.
+Metadata for test-topic (from broker 3: 14.0.0.3:9092/3):
+ 3 brokers:
+  broker 3 at 14.0.0.3:9092
+  broker 1 at 14.0.0.1:9092
+  broker 6 at 14.0.0.6:9092
+ 1 topics:
+  topic "test-topic" with 3 partitions:
+    partition 0, leader 6, replicas: 6,3,1, isrs: 6,1,3
+    partition 1, leader 3, replicas: 3,1,6, isrs: 3,1,6
+    partition 2, leader 1, replicas: 1,6,3, isrs: 1,6,3
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	37m56,651s
+user	0m27,038s
+sys	0m4,552s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	36m35,167s
+user	0m27,100s
+sys	0m4,357s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	36m32,927s
+user	0m30,494s
+sys	0m4,216s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	37m24,774s
+user	0m27,191s
+sys	0m4,509s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	37m51,177s
+user	0m28,883s
+sys	0m4,465s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	38m17,765s
+user	0m26,842s
+sys	0m4,575s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	36m42,325s
+user	0m29,749s
+sys	0m4,403s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	36m53,876s
+user	0m28,314s
+sys	0m4,328s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	37m6,242s
+user	0m27,836s
+sys	0m4,326s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+org.apache.kafka.common.errors.NetworkException: The server disconnected before a response was received.
+java.util.concurrent.ExecutionException: org.apache.kafka.common.errors.NetworkException: The server disconnected before a response was received.
+	at org.apache.kafka.clients.producer.internals.FutureRecordMetadata.valueOrError(FutureRecordMetadata.java:98)
+	at org.apache.kafka.clients.producer.internals.FutureRecordMetadata.get(FutureRecordMetadata.java:67)
+	at org.apache.kafka.clients.producer.internals.FutureRecordMetadata.get(FutureRecordMetadata.java:30)
+	at main.ProducerPerformance.main(ProducerPerformance.java:73)
+Caused by: org.apache.kafka.common.errors.NetworkException: The server disconnected before a response was received.
+
+real	31m18,117s
+user	0m24,586s
+sys	0m3,845s
+Setando retention.ms para 1 seg.
+Completed Updating config for entity: topic 'test-topic'.
+Esperando 3 minutos segundos para resetar topico.
+..................................................................................................................................................................................................................................................
+Restaurando config  default.
+Completed Updating config for entity: topic 'test-topic'.
+Metadata for test-topic (from broker 3: 14.0.0.3:9092/3):
+ 3 brokers:
+  broker 3 at 14.0.0.3:9092
+  broker 1 at 14.0.0.1:9092
+  broker 6 at 14.0.0.6:9092
+ 1 topics:
+  topic "test-topic" with 3 partitions:
+    partition 0, leader 6, replicas: 6,3,1, isrs: 6,1,3
+    partition 1, leader 3, replicas: 3,1,6, isrs: 3,1,6
+    partition 2, leader 1, replicas: 1,6,3, isrs: 1,6,3
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+org.apache.kafka.common.errors.NetworkException: The server disconnected before a response was received.
+java.util.concurrent.ExecutionException: org.apache.kafka.common.errors.NetworkException: The server disconnected before a response was received.
+	at org.apache.kafka.clients.producer.internals.FutureRecordMetadata.valueOrError(FutureRecordMetadata.java:98)
+	at org.apache.kafka.clients.producer.internals.FutureRecordMetadata.get(FutureRecordMetadata.java:67)
+	at org.apache.kafka.clients.producer.internals.FutureRecordMetadata.get(FutureRecordMetadata.java:30)
+	at main.ProducerPerformance.main(ProducerPerformance.java:73)
+Caused by: org.apache.kafka.common.errors.NetworkException: The server disconnected before a response was received.
+
+real	2m4,257s
+user	0m9,634s
+sys	0m0,540s
+Setando retention.ms para 1 seg.
+Completed Updating config for entity: topic 'test-topic'.
+Esperando 3 minutos segundos para resetar topico.
+..................................................................................................................................................................................................................................................
+Restaurando config  default.
+Completed Updating config for entity: topic 'test-topic'.
+Metadata for test-topic (from broker 3: 14.0.0.3:9092/3):
+ 3 brokers:
+  broker 3 at 14.0.0.3:9092
+  broker 1 at 14.0.0.1:9092
+  broker 6 at 14.0.0.6:9092
+ 1 topics:
+  topic "test-topic" with 3 partitions:
+    partition 0, leader 6, replicas: 6,3,1, isrs: 6,1,3
+    partition 1, leader 3, replicas: 3,1,6, isrs: 3,1,6
+    partition 2, leader 1, replicas: 1,6,3, isrs: 1,6,3
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+org.apache.kafka.common.errors.NetworkException: The server disconnected before a response was received.
+java.util.concurrent.ExecutionException: org.apache.kafka.common.errors.NetworkException: The server disconnected before a response was received.
+	at org.apache.kafka.clients.producer.internals.FutureRecordMetadata.valueOrError(FutureRecordMetadata.java:98)
+	at org.apache.kafka.clients.producer.internals.FutureRecordMetadata.get(FutureRecordMetadata.java:67)
+	at org.apache.kafka.clients.producer.internals.FutureRecordMetadata.get(FutureRecordMetadata.java:30)
+	at main.ProducerPerformance.main(ProducerPerformance.java:73)
+Caused by: org.apache.kafka.common.errors.NetworkException: The server disconnected before a response was received.
+
+real	4m12,788s
+user	0m16,196s
+sys	0m0,819s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	37m10,808s
+user	0m26,870s
+sys	0m4,505s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	36m23,707s
+user	0m29,314s
+sys	0m4,440s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	36m42,422s
+user	0m28,235s
+sys	0m4,256s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	36m41,653s
+user	0m26,296s
+sys	0m4,683s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+real	37m25,327s
+user	0m26,591s
+sys	0m4,420s

@@ -1,0 +1,412 @@
+Setando retention.ms para 1 seg.
+Completed Updating config for entity: topic 'test-topic'.
+Esperando 3 minutos segundos para resetar topico.
+..................................................................................................................................................................................................................................................
+Restaurando config  default.
+Completed Updating config for entity: topic 'test-topic'.
+Metadata for test-topic (from broker 6: 14.0.0.6:9092/6):
+ 3 brokers:
+  broker 3 at 14.0.0.3:9092
+  broker 1 at 14.0.0.1:9092
+  broker 6 at 14.0.0.6:9092
+ 1 topics:
+  topic "test-topic" with 3 partitions:
+    partition 0, leader 6, replicas: 6,1,3, isrs: 6,1,3
+    partition 1, leader 3, replicas: 3,6,1, isrs: 3,6,1
+    partition 2, leader 1, replicas: 1,3,6, isrs: 1,3,6
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 10:59:18 AM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	3m0,754s
+user	2m48,964s
+sys	0m7,666s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 11:05:21 AM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	3m7,094s
+user	3m4,130s
+sys	0m7,806s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 11:11:31 AM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m58,923s
+user	2m57,977s
+sys	0m8,495s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 11:17:32 AM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	3m1,278s
+user	2m59,893s
+sys	0m7,779s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 11:23:36 AM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m59,928s
+user	3m0,195s
+sys	0m7,536s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 11:29:38 AM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m52,414s
+user	2m52,561s
+sys	0m7,509s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 11:35:33 AM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m49,016s
+user	2m49,724s
+sys	0m7,585s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 11:41:25 AM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m52,675s
+user	2m52,560s
+sys	0m7,669s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 11:47:20 AM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m47,367s
+user	2m47,576s
+sys	0m7,527s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 11:53:10 AM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m52,109s
+user	2m52,314s
+sys	0m7,396s
+Setando retention.ms para 1 seg.
+Completed Updating config for entity: topic 'test-topic'.
+Esperando 3 minutos segundos para resetar topico.
+..................................................................................................................................................................................................................................................
+Restaurando config  default.
+Completed Updating config for entity: topic 'test-topic'.
+Metadata for test-topic (from broker 6: 14.0.0.6:9092/6):
+ 3 brokers:
+  broker 3 at 14.0.0.3:9092
+  broker 1 at 14.0.0.1:9092
+  broker 6 at 14.0.0.6:9092
+ 1 topics:
+  topic "test-topic" with 3 partitions:
+    partition 0, leader 6, replicas: 6,1,3, isrs: 6,1,3
+    partition 1, leader 3, replicas: 3,6,1, isrs: 3,6,1
+    partition 2, leader 1, replicas: 1,3,6, isrs: 1,3,6
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 12:03:12 PM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m52,758s
+user	2m55,723s
+sys	0m7,705s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 12:09:08 PM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m53,135s
+user	2m52,743s
+sys	0m7,774s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 12:15:03 PM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m56,081s
+user	2m56,210s
+sys	0m7,601s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 12:21:02 PM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m52,473s
+user	2m52,641s
+sys	0m7,731s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 12:26:57 PM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m46,234s
+user	2m45,061s
+sys	0m7,379s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 12:32:45 PM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m54,764s
+user	2m55,637s
+sys	0m7,576s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 12:38:43 PM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m56,922s
+user	2m58,688s
+sys	0m7,693s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 12:44:42 PM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m49,915s
+user	2m50,836s
+sys	0m7,461s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 12:50:34 PM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m56,548s
+user	2m56,737s
+sys	0m7,400s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 12:56:33 PM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m52,195s
+user	2m53,462s
+sys	0m7,900s
+Setando retention.ms para 1 seg.
+Completed Updating config for entity: topic 'test-topic'.
+Esperando 3 minutos segundos para resetar topico.
+..................................................................................................................................................................................................................................................
+Restaurando config  default.
+Completed Updating config for entity: topic 'test-topic'.
+Metadata for test-topic (from broker 3: 14.0.0.3:9092/3):
+ 3 brokers:
+  broker 3 at 14.0.0.3:9092
+  broker 1 at 14.0.0.1:9092
+  broker 6 at 14.0.0.6:9092
+ 1 topics:
+  topic "test-topic" with 3 partitions:
+    partition 0, leader 6, replicas: 6,1,3, isrs: 6,1,3
+    partition 1, leader 3, replicas: 3,6,1, isrs: 3,6,1
+    partition 2, leader 1, replicas: 1,3,6, isrs: 1,3,6
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 1:06:36 PM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m52,402s
+user	2m51,278s
+sys	0m7,679s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 1:12:31 PM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m51,261s
+user	2m50,383s
+sys	0m7,368s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 1:18:25 PM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m51,839s
+user	2m52,953s
+sys	0m7,639s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 1:24:19 PM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m50,124s
+user	2m51,690s
+sys	0m6,992s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 1:30:12 PM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m51,304s
+user	2m53,399s
+sys	0m7,950s
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ignite.internal.util.GridUnsafe$2 (file:/home/lsc/workspace/PerformanceKafka/jars/ignite-core-2.7.6.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of org.apache.ignite.internal.util.GridUnsafe$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+jun 29, 2020 1:36:05 PM org.apache.ignite.logger.java.JavaLogger warning
+WARNING: Failed to resolve default logging config file: config/java.util.logging.properties
+
+real	2m49,130s
+user	2m50,478s
+sys	0m7,920s

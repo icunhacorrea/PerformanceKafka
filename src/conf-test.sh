@@ -6,7 +6,7 @@ for ack in -2 #
 do
 	for size in 1000
 	do
-		for i in {0..20}
+		for i in {0..25}
 		do
 			n=$(( i % 10 ))
 			if [ $n -eq 0 ]; then

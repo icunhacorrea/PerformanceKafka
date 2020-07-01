@@ -54,13 +54,13 @@ public class ProducerPerformance {
             ThroughputThrottler throttler = new ThroughputThrottler(-1, startMs);
             // Send messages;
             long startProduce = System.currentTimeMillis();
-            for (int i = 0; i < qntRecords; i++) {
+            for (int i = 1; i <= qntRecords; i++) {
                 ProducerRecord<String, String> record = new ProducerRecord<>(topicName, Integer.toString(i), message);
                 long sendStartMs = System.currentTimeMillis();
                 Callback cb = stats.nextCompletion(sendStartMs, message.length(), stats);
 
                 Timestamp stamp = new Timestamp(System.currentTimeMillis());
-                Record _record = new Record("producer-1", topicName, i + 1, qntRecords, record.key(),
+                Record _record = new Record("producer-1", topicName, i, qntRecords, record.key(),
                         record.value(), stamp.getTime());
 
                 if (acks.equals("-2")) {
@@ -71,13 +71,16 @@ public class ProducerPerformance {
 
                 record.setAfterTimestamp(stamp.getTime());
                 RecordMetadata metadata = producer.send(record, cb).get();
-                //producer.send(record);
+                //producer.send(record,cb);
 
                 if (throttler.shouldThrottle(i, sendStartMs)) {
                     throttler.throttle();
                 }
                 //Thread.sleep(rd.nextInt(31) + 10);
+		//System.out.println("I: " + i);
+		//System.out.println(metadata.toString());
             }
+	    
             long stopProduce = System.currentTimeMillis();
             producer.flush();
             stats.printTotal();
@@ -116,7 +119,7 @@ public class ProducerPerformance {
         props.put(ProducerConfig.TOPIC_TO_SEND, topicName);
         if (acks.equals(-1) || acks.equals("all"))
             props.put(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, true);
-        //props.put(ProducerConfig.BATCH_SIZE_CONFIG, 0);
+        //props.put(ProducerConfig.BATCH_SIZE_CONFIG, 16000);
         props.put(ProducerConfig.RETRIES_CONFIG, 1);
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");

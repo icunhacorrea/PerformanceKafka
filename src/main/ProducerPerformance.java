@@ -113,7 +113,7 @@ public class ProducerPerformance {
         Properties props = new Properties();
         props.put(ProducerConfig.QNT_REQUESTS, qntRecords);
         props.put(ProducerConfig.CLIENT_ID_CONFIG, "producer-1");
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "14.0.0.1:9092,14.0.0.3:9092,14.0.0.6:9092");
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "kafka1:9092");
         //props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
         props.put(ProducerConfig.ACKS_CONFIG, acks);
         props.put(ProducerConfig.TOPIC_TO_SEND, topicName);

@@ -34,7 +34,7 @@ public class Sender extends Thread {
         TcpDiscoverySpi spi = new TcpDiscoverySpi();
         TcpDiscoveryMulticastIpFinder tcMp = new TcpDiscoveryMulticastIpFinder();
         IgniteConfiguration cfg = new IgniteConfiguration();
-        tcMp.setAddresses(Arrays.asList("14.0.0.4"));
+        tcMp.setAddresses(Arrays.asList("monitor1"));
         spi.setIpFinder(tcMp);
         cfg.setDiscoverySpi(spi);
         cfg.setClientMode(true);

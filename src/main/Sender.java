@@ -46,7 +46,7 @@ public class Sender extends Thread {
             synchronized (records) {
                 if (finished.get() == true)
                     running = false;
-                if (records.size() >= 10) {
+                if (records.size() >= 1) {
 
                     records.forEach(_record -> cache.put(_record.getOrigem() + ";" + _record.getDestino() + ";" +
                             _record.getIdSeq(), _record.getTimeStamp() + ";" + _record.getQntRecords() + ";" +

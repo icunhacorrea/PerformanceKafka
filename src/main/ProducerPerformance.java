@@ -76,9 +76,6 @@ public class ProducerPerformance {
                 if (throttler.shouldThrottle(i, sendStartMs)) {
                     throttler.throttle();
                 }
-                //Thread.sleep(rd.nextInt(31) + 10);
-		//System.out.println("I: " + i);
-		//System.out.println(metadata.toString());
             }
 	    
             long stopProduce = System.currentTimeMillis();
@@ -95,19 +92,6 @@ public class ProducerPerformance {
         sender.join();
         System.out.println("Aplication time: " + (System.currentTimeMillis() - startApp) / 1000F);
     }
-
-    /*private static void send(List<Record> records) {
-        try {
-            Socket socket = new Socket("127.0.0.1", 6666);
-            //Socket socket = new Socket("14.0.0.4", 6666);
-            socket.setSendBufferSize(Integer.MAX_VALUE);
-            socket.setTcpNoDelay(true);
-            ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
-            oos.writeObject(records);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }*/
 
     private static Properties newConfig(String topicName, String acks, int qntRecords) {
         Properties props = new Properties();

@@ -1,14 +1,9 @@
 package main;
 
-import org.apache.ignite.Ignite;
-import org.apache.ignite.IgniteCache;
-import org.apache.ignite.Ignition;
-import org.apache.ignite.configuration.IgniteConfiguration;
-import org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi;
-import org.apache.ignite.spi.discovery.tcp.ipfinder.multicast.TcpDiscoveryMulticastIpFinder;
 import recordutil.src.main.Record;
 
-import java.util.Arrays;
+import java.io.ObjectOutputStream;
+import java.net.Socket;
 import java.util.Vector;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -18,10 +13,6 @@ public class Sender extends Thread {
 
     AtomicBoolean finished;
 
-    Ignite ignite;
-
-    IgniteCache<String, String> cache;
-
     public Sender(Vector<Record> records, AtomicBoolean finished) {
         this.records = records;
         this.finished = finished;
@@ -30,30 +21,32 @@ public class Sender extends Thread {
     @Override
     public void run() {
         boolean running = true;
-
-        TcpDiscoverySpi spi = new TcpDiscoverySpi();
-        TcpDiscoveryMulticastIpFinder tcMp = new TcpDiscoveryMulticastIpFinder();
-        IgniteConfiguration cfg = new IgniteConfiguration();
-        tcMp.setAddresses(Arrays.asList("monitor1"));
-        spi.setIpFinder(tcMp);
-        cfg.setDiscoverySpi(spi);
-        cfg.setClientMode(true);
-
-        this.ignite = Ignition.start(cfg);
-        this.cache = ignite.getOrCreateCache("cache");
-
-        while (running) {
-            synchronized (records) {
-                if (finished.get() == true)
+        try {
+            while (running) {
+		synchronized (records) {
+			if (records.size() >= 25) {
+			    send();
+			    records.clear();
+			}
+		}
+                if (finished.get() == true) {
+                    send();
                     running = false;
-                if (records.size() >= 24) {
-
-                    records.forEach(_record -> cache.put(_record.getOrigem() + ";" + _record.getDestino() + ";" +
-                            _record.getIdSeq(), _record));
-                    records.clear();
                 }
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        ignite.close();
+    }
+
+    public void send() {
+        try {
+            Socket socket = new Socket("localhost", 6666);
+            socket.setSendBufferSize(Integer.MAX_VALUE);
+            ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
+            oos.writeObject(records);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

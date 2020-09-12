@@ -1,8 +1,6 @@
 package main;
 
-import java.io.ObjectOutputStream;
 import java.lang.System;
-import java.net.Socket;
 import java.sql.Timestamp;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -65,13 +63,12 @@ public class ProducerPerformance {
 
                 if (acks.equals("-2")) {
                     synchronized (records) {
-                        records.add(_record);
-                    }
+			records.add(_record);
+		    }
                 }
 
                 record.setAfterTimestamp(stamp.getTime());
                 RecordMetadata metadata = producer.send(record, cb).get();
-                //producer.send(record,cb);
 
                 if (throttler.shouldThrottle(i, sendStartMs)) {
                     throttler.throttle();
@@ -97,8 +94,8 @@ public class ProducerPerformance {
         Properties props = new Properties();
         props.put(ProducerConfig.QNT_REQUESTS, qntRecords);
         props.put(ProducerConfig.CLIENT_ID_CONFIG, "producer-1");
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "kafka1:9093,kafka2:9094,kafka3:9095");
-        //props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
+        //props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "kafka1:9093,kafka2:9094,kafka3:9095");
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         props.put(ProducerConfig.ACKS_CONFIG, acks);
         props.put(ProducerConfig.TOPIC_TO_SEND, topicName);
         if (acks.equals(-1) || acks.equals("all"))

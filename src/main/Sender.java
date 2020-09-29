@@ -24,7 +24,7 @@ public class Sender extends Thread {
         try {
             while (running) {
 		synchronized (records) {
-			if (records.size() >= 25) {
+			if (records.size() >= 100) {
 			    send();
 			    records.clear();
 			}
@@ -41,7 +41,7 @@ public class Sender extends Thread {
 
     public void send() {
         try {
-            Socket socket = new Socket("localhost", 6666);
+            Socket socket = new Socket("monitor1", 6666);
             socket.setSendBufferSize(Integer.MAX_VALUE);
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
             oos.writeObject(records);

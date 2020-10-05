@@ -24,7 +24,7 @@ public class Sender extends Thread {
         try {
             while (running) {
 		synchronized (records) {
-			if (records.size() >= 5) {
+			if (records.size() >= 5000) {
 			    send();
 			    records.clear();
 			}

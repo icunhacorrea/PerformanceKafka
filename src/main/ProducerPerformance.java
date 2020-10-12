@@ -36,8 +36,6 @@ public class ProducerPerformance {
         String message = genRecord(size);
         Properties props = newConfig(topicName, acks, qntRecords);
         Producer<String, String> producer = new KafkaProducer<>(props);
-        Random rd = new Random();
-
 
         Vector<Record> records = new Vector<>();
         AtomicBoolean finished = new AtomicBoolean();
@@ -101,7 +99,7 @@ public class ProducerPerformance {
         if (acks.equals(-1) || acks.equals("all"))
             props.put(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, true);
         //props.put(ProducerConfig.BATCH_SIZE_CONFIG, 16000);
-        props.put(ProducerConfig.RETRIES_CONFIG, 1);
+        //props.put(ProducerConfig.RETRIES_CONFIG, 1);
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
         return props;

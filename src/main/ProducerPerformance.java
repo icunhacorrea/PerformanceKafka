@@ -63,8 +63,8 @@ public class ProducerPerformance {
 
                 if (acks.equals("-2")) {
                     synchronized (records) {
-			records.add(_record);
-		    }
+                        records.add(_record);
+                    }
                 }
 
                 record.setAfterTimestamp(stamp.getTime());

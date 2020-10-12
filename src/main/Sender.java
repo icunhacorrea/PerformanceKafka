@@ -23,15 +23,16 @@ public class Sender extends Thread {
         boolean running = true;
         try {
             while (running) {
-		synchronized (records) {
-			if (records.size() >= 250) {
-			    send();
-			    records.clear();
-			}
-		}
-                if (finished.get() == true) {
-                    send();
-                    running = false;
+                synchronized (records) {
+                    if (records.size() >= 249) {
+                        send();
+                        records.clear();
+                    }
+
+                    if (finished.get() == true) {
+                        send();
+                        running = false;
+                    }
                 }
             }
         } catch (Exception e) {

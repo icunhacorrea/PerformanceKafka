@@ -24,14 +24,13 @@ public class Sender extends Thread {
         try {
             while (running) {
                 synchronized (records) {
-                    if (records.size() >= 249) {
-                        send();
-                        records.clear();
-                    }
-
                     if (finished.get() == true) {
                         send();
                         running = false;
+                    }
+                    if (records.size() > 24) {
+                        send();
+                        records.clear();
                     }
                 }
             }

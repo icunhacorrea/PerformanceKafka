@@ -67,6 +67,7 @@ public class ProducerPerformance {
 
                 record.setAfterTimestamp(stamp.getTime());
                 RecordMetadata metadata = producer.send(record, cb).get();
+                //producer.send(record);
 
                 if (throttler.shouldThrottle(i, sendStartMs)) {
                     throttler.throttle();
@@ -92,7 +93,7 @@ public class ProducerPerformance {
         Properties props = new Properties();
         props.put(ProducerConfig.QNT_REQUESTS, qntRecords);
         props.put(ProducerConfig.CLIENT_ID_CONFIG, "producer-1");
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "172.21.0.5:9092,172.21.0.6:9092,172.21.0.7:9092");
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "kafka1:9092,kafka2:9092,kafka3:9092");
         //props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         props.put(ProducerConfig.ACKS_CONFIG, acks);
         props.put(ProducerConfig.TOPIC_TO_SEND, topicName);

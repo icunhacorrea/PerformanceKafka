@@ -100,7 +100,7 @@ public class ProducerPerformance {
         if (acks.equals(-1) || acks.equals("all"))
             props.put(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, true);
         //props.put(ProducerConfig.BATCH_SIZE_CONFIG, 16000);
-        //props.put(ProducerConfig.RETRIES_CONFIG, 1);
+        props.put(ProducerConfig.RETRIES_CONFIG, 0);
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
         return props;

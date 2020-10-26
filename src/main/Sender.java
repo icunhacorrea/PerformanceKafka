@@ -41,10 +41,7 @@ public class Sender extends Thread {
 
     public void send() {
         try {
-<<<<<<< HEAD
             //Socket socket = new Socket("monitor1", 6666);
-=======
->>>>>>> a95af253354c29292f557dd65086d412ae48e34f
             Socket socket = new Socket("172.21.0.8", 6666);
             socket.setSendBufferSize(Integer.MAX_VALUE);
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());

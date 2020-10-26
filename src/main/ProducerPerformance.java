@@ -68,8 +68,8 @@ public class ProducerPerformance {
                 }
 
                 record.setAfterTimestamp(stamp.getTime());
-                RecordMetadata metadata = producer.send(record, cb).get();
-                //producer.send(record);
+                //RecordMetadata metadata = producer.send(record, cb).get();
+                producer.send(record);
 
                 if (throttler.shouldThrottle(i, sendStartMs)) {
                     throttler.throttle();

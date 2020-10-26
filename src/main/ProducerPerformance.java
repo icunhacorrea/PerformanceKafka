@@ -27,14 +27,16 @@ public class ProducerPerformance {
         String acks = args[1];
         int qntRecords = Integer.parseInt(args[2]);
         int size = Integer.parseInt(args[3]);
+        int batchSize = Integer.parseInt(args[3]) +  50;
 
         System.out.println("Topic to send: " + topicName);
         System.out.println("Topic to acks: " + acks);
         System.out.println("Records: " + qntRecords);
         System.out.println("Size: " + size);
+        System.out.println("Bath Size: " + batchSize);
 
         String message = genRecord(size);
-        Properties props = newConfig(topicName, acks, qntRecords);
+        Properties props = newConfig(topicName, acks, qntRecords, batchSize);
         Producer<String, String> producer = new KafkaProducer<>(props);
 
         Vector<Record> records = new Vector<>();
@@ -66,8 +68,8 @@ public class ProducerPerformance {
                 }
 
                 record.setAfterTimestamp(stamp.getTime());
-                RecordMetadata metadata = producer.send(record, cb).get();
-                //producer.send(record);
+                //RecordMetadata metadata = producer.send(record, cb).get();
+                producer.send(record);
 
                 if (throttler.shouldThrottle(i, sendStartMs)) {
                     throttler.throttle();
@@ -89,18 +91,22 @@ public class ProducerPerformance {
         System.out.println("Aplication time: " + (System.currentTimeMillis() - startApp) / 1000F);
     }
 
-    private static Properties newConfig(String topicName, String acks, int qntRecords) {
+    private static Properties newConfig(String topicName, String acks, int qntRecords,
+                                        int batchSize) {
         Properties props = new Properties();
         props.put(ProducerConfig.QNT_REQUESTS, qntRecords);
         props.put(ProducerConfig.CLIENT_ID_CONFIG, "producer-1");
+<<<<<<< HEAD
         //props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "kafka1:9092,kafka2:9092,kafka3:9092");
+=======
+>>>>>>> a95af253354c29292f557dd65086d412ae48e34f
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "172.21.0.5:9092,172.21.0.6:9092,172.21.0.7:9092");
         //props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         props.put(ProducerConfig.ACKS_CONFIG, acks);
         props.put(ProducerConfig.TOPIC_TO_SEND, topicName);
         if (acks.equals(-1) || acks.equals("all"))
             props.put(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, true);
-        //props.put(ProducerConfig.BATCH_SIZE_CONFIG, 16000);
+        props.put(ProducerConfig.BATCH_SIZE_CONFIG, batchSize);
         props.put(ProducerConfig.RETRIES_CONFIG, 0);
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");

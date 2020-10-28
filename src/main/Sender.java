@@ -41,8 +41,8 @@ public class Sender extends Thread {
 
     public void send() {
         try {
-            Socket socket = new Socket("monitor1", 6666);
-            //Socket socket = new Socket("172.21.0.8", 6666);
+            //Socket socket = new Socket("monitor1", 6666);
+            Socket socket = new Socket("172.21.0.8", 6666);
             socket.setSendBufferSize(Integer.MAX_VALUE);
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
             oos.writeObject(records);

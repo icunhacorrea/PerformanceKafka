@@ -74,6 +74,8 @@ public class ProducerPerformance {
                 if (throttler.shouldThrottle(i, sendStartMs)) {
                     throttler.throttle();
                 }
+
+                Thread.sleep(100);
             }
 	    
             long stopProduce = System.currentTimeMillis();

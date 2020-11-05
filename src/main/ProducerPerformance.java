@@ -27,7 +27,7 @@ public class ProducerPerformance {
         String acks = args[1];
         int qntRecords = Integer.parseInt(args[2]);
         int size = Integer.parseInt(args[3]);
-        int batchSize = Integer.parseInt(args[3]) + 30;
+        int batchSize = Integer.parseInt(args[3]);
 
         System.out.println("Topic to send: " + topicName);
         System.out.println("Topic to acks: " + acks);
@@ -69,7 +69,7 @@ public class ProducerPerformance {
 
                 record.setAfterTimestamp(stamp.getTime());
                 //RecordMetadata metadata = producer.send(record, cb).get();
-                producer.send(record, cb);
+                producer.send(record);
 
                 if (throttler.shouldThrottle(i, sendStartMs)) {
                     throttler.throttle();

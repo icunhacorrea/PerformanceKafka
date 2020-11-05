@@ -27,7 +27,7 @@ public class ProducerPerformance {
         String acks = args[1];
         int qntRecords = Integer.parseInt(args[2]);
         int size = Integer.parseInt(args[3]);
-        int batchSize = Integer.parseInt(args[3]) +  50;
+        int batchSize = Integer.parseInt(args[3]) + 30;
 
         System.out.println("Topic to send: " + topicName);
         System.out.println("Topic to acks: " + acks);

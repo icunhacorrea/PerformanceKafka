@@ -28,6 +28,7 @@ public class Sender extends Thread {
         Socket socket = new Socket();
         try {
             socket.setSendBufferSize(Integer.MAX_VALUE);
+            socket.connect(sockAddr, 10000);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -54,7 +55,6 @@ public class Sender extends Thread {
         try {
             //Socket socket = new Socket("monitor1", 6666);
             //socket.setSendBufferSize(Integer.MAX_VALUE);
-            socket.connect(sockAddr, 10000);
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
             oos.writeObject(records);
         } catch (Exception e) {

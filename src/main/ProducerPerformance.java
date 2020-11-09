@@ -33,7 +33,7 @@ public class ProducerPerformance {
         System.out.println("Topic to acks: " + acks);
         System.out.println("Records: " + qntRecords);
         System.out.println("Size: " + size);
-        System.out.println("Bath Size: " + batchSize);
+        System.out.println("Batch Size: " + batchSize);
 
         String message = genRecord(size);
         Properties props = newConfig(topicName, acks, qntRecords, batchSize);

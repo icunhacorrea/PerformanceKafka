@@ -28,7 +28,7 @@ public class Sender extends Thread {
                         send();
                         running = false;
                     }
-                    if (records.size() >= 256) {
+                    if (records.size() >= 16) {
                         send();
                         records.clear();
                     }

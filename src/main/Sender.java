@@ -25,11 +25,11 @@ public class Sender extends Thread {
             while (running) {
                 synchronized (records) {
                     if (finished.get() == true) {
-                        send();
+                        makeSends();
                         running = false;
                     }
                     if (records.size() >= 128) {
-                        send();
+                        makeSends();
                         records.clear();
                     }
                 }
@@ -39,26 +39,23 @@ public class Sender extends Thread {
         }
     }
 
-    public void send() {
+    public Exception send() {
+        Exception e = null;
         try {
-            //Socket socket = new Socket("monitor1", 6666);
             Socket socket = new Socket("172.21.0.8", 6666);
             //socket.setSendBufferSize(Integer.MAX_VALUE);
             socket.setSoTimeout(1000);
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
             oos.writeObject(records);
-        } catch (Exception e) {
-            System.out.println("ieajiejsajea");
-            try {
-                Socket socket = new Socket("172.21.0.8", 6666);
-                //socket.setSendBufferSize(Integer.MAX_VALUE);
-                socket.setSoTimeout(1000);
-                ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
-                oos.writeObject(records);
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-            e.printStackTrace();
+        } catch (Exception ex) {
+            e = ex;
+        }
+        return e;
+    }
+
+    public void makeSends() {
+        if (send() != null) {
+            send();
         }
     }
 }

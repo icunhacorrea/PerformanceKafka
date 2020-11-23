@@ -44,10 +44,11 @@ public class Sender extends Thread {
             //Socket socket = new Socket("monitor1", 6666);
             Socket socket = new Socket("172.21.0.8", 6666);
             socket.setSendBufferSize(Integer.MAX_VALUE);
-            socket.setSoTimeout(30000);
+            socket.setSoTimeout(10000);
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
             oos.writeObject(records);
         } catch (Exception e) {
+            System.out.println("ieajiejsajea");
             e.printStackTrace();
         }
     }

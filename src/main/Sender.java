@@ -28,7 +28,7 @@ public class Sender extends Thread {
                         send();
                         running = false;
                     }
-                    if (records.size() >= 16) {
+                    if (records.size() >= 128) {
                         send();
                         records.clear();
                     }
@@ -44,7 +44,7 @@ public class Sender extends Thread {
             //Socket socket = new Socket("monitor1", 6666);
             Socket socket = new Socket("172.21.0.8", 6666);
             socket.setSendBufferSize(Integer.MAX_VALUE);
-            socket.setSoTimeout(60000);
+            socket.setSoTimeout(30000);
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
             oos.writeObject(records);
         } catch (Exception e) {

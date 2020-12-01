@@ -43,11 +43,11 @@ public class Sender extends Thread {
         Exception e = null;
         try {
             Socket socket = new Socket("172.21.0.8", 6666);
-            socket.setSendBufferSize(Integer.MAX_VALUE);
+            //socket.setSendBufferSize(Integer.MAX_VALUE);
             socket.setSoTimeout(1750);
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
             oos.writeObject(records);
-            socket.close();
+            //socket.close();
         } catch (Exception ex) {
             e = ex;
         }

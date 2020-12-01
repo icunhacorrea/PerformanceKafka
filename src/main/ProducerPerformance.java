@@ -79,7 +79,7 @@ public class ProducerPerformance {
             }
 	    
             long stopProduce = System.currentTimeMillis();
-            producer.flush();
+            //producer.flush();
             stats.printTotal();
             ToolsUtils.printMetrics(producer.metrics());
             producer.close();

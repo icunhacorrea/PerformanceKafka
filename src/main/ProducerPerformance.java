@@ -43,6 +43,7 @@ public class ProducerPerformance {
         AtomicBoolean finished = new AtomicBoolean();
         finished.set(false);
         Sender sender = new Sender(records, finished);
+        sender.setPriority(10);
         if (acks.equals("-2"))
             sender.start();
 

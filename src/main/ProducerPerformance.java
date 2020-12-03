@@ -69,6 +69,7 @@ public class ProducerPerformance {
                 record.setAfterTimestamp(stamp.getTime());
                 //RecordMetadata metadata = producer.send(record, cb).get();
                 producer.send(record);
+                producer.flush();
 
                 if (throttler.shouldThrottle(i, sendStartMs)) {
                     throttler.throttle();
@@ -78,7 +79,6 @@ public class ProducerPerformance {
             }
 	    
             long stopProduce = System.currentTimeMillis();
-            //producer.flush();
             ToolsUtils.printMetrics(producer.metrics());
             producer.close();
             finished.set(true);

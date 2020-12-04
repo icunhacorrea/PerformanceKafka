@@ -28,7 +28,7 @@ public class Sender extends Thread {
                         makeSends();
                         running = false;
                     }
-                    if (records.size() >= 800) {
+                    if (records.size() >= 1000) {
                         makeSends();
                         records.clear();
                     }
@@ -43,7 +43,7 @@ public class Sender extends Thread {
         Exception e = null;
         try {
             Socket socket = new Socket("172.21.0.8", 6666);
-            socket.setSoTimeout(2000);
+            socket.setSoTimeout(1750);
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
             oos.writeObject(records);
         } catch (Exception ex) {

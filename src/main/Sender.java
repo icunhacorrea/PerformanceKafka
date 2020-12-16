@@ -44,10 +44,9 @@ public class Sender extends Thread {
         try {
             Socket socket = new Socket("172.21.0.8", 6666);
             socket.setSendBufferSize(Integer.MAX_VALUE);
-            socket.setSoTimeout(4000);
+            socket.setSoTimeout(5000);
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
             oos.writeObject(records);
-            socket.close();
         } catch (Exception ex) {
             e = ex;
         }

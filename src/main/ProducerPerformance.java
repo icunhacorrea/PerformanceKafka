@@ -42,6 +42,7 @@ public class ProducerPerformance {
         Vector<Record> records = new Vector<>();
         AtomicBoolean finished = new AtomicBoolean();
         finished.set(false);
+
         Sender sender = new Sender(records, finished);
         sender.setPriority(10);
         if (acks.equals("-2"))
@@ -67,7 +68,6 @@ public class ProducerPerformance {
                 }
 
                 record.setAfterTimestamp(stamp.getTime());
-                //RecordMetadata metadata = producer.send(record, cb).get();
                 producer.send(record);
                 producer.flush();
 
@@ -75,7 +75,6 @@ public class ProducerPerformance {
                     throttler.throttle();
                 }
 
-                //Thread.sleep(1);
             }
 	    
             long stopProduce = System.currentTimeMillis();

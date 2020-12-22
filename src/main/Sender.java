@@ -47,7 +47,6 @@ public class Sender extends Thread {
             socket.setSoTimeout(10000);
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
             oos.writeObject(records);
-            socket.close();
         } catch (Exception ex) {
             e = ex;
         }
